@@ -1,0 +1,9 @@
+<a href="diffractometerFull.jpg"><img border="0" width=40% src="diffractometer.jpg"/></a>
+
+<li>My <a href="text.html">articles</a> about random stuff  (in English)
+
+
+<p>Mas Carlos!! <b>Porque você escreve essas coisas??</b></p>
+			<p>A resposta é: Eu não sei direito. Só acho que é legal pensar sobre as coisas e eventualmente escrever sobre.</p>
+			<p>Na verdade, tenho muita escrita nos meus cadernos e aos poucos vou tentar passar a limpo os textos que eu gosto mais.</p>
+			
