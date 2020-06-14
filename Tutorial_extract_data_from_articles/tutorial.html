@@ -7,15 +7,18 @@
 	<meta name="author" content="Carlos Galdino"/>
 	<meta name="created" content="2020-06-13T16:47:46.136412439"/>
 	<meta name="changedby" content="Carlos Galdino"/>
-	<meta name="changed" content="2020-06-14T16:59:56.310714005"/>
+	<meta name="changed" content="2020-06-14T17:04:04.088233452"/>
 	<style type="text/css">
 		@page { size: 21.01cm 29.69cm; margin-left: 2.95cm; margin-right: 0.99cm }
 		p { margin-left: 3cm; margin-right: 3cm; color: #444444; line-height: 200%; page-break-before: auto }
 		p.western { font-family: "cmr10"; font-size: 15pt }
 		h1 { margin-left: 3cm; margin-right: 3cm; color: #444444; line-height: 200%; page-break-before: auto }
+		p.sdfootnote-western { margin-bottom: 0cm; font-family: "cmr10"; font-size: 10pt }
+		p.sdfootnote-cjk { margin-bottom: 0cm; font-size: 10pt }
+		p.sdfootnote-ctl { margin-bottom: 0cm; font-size: 10pt }
 	</style>
 </head>
-<body lang="en-US" bgcolor="#ffffff" dir="ltr">
+<body lang="en-US" text="#444444" bgcolor="#ffffff" dir="ltr">
 <h1 style="margin-left: 0.64cm; margin-right: 1.12cm; background: transparent; page-break-after: avoid">
 <br/>
 <br/>
@@ -23,9 +26,7 @@
 </h1>
 <p align="left" style="margin-top: 0.42cm; page-break-after: avoid"><font face="Roboto"><font size="7" style="font-size: 36pt"><b>Extract
 data from figures using Inkscape</b></font></font></p>
-<p class="western" style="margin-left: 2.49cm; margin-right: 2.49cm; margin-top: 0.51cm; margin-bottom: 0.51cm; font-weight: normal; line-height: 100%">
-<font color="#444444"><font face="cmr10"><font size="2" style="font-size: 10pt">Last
-edited: <sdfield type=DATETIME sdval="43996.5204159664" sdnum="1033;1033;MM/DD/YY">06/14/20</sdfield></font></font></font></p>
+<p class="sdfootnote-western">Last edited: <sdfield type=DATETIME sdval="43996.5204159664" sdnum="1033;1033;MM/DD/YY">06/14/20</sdfield></p>
 <p class="western">In this tutorial, we are going to extract data
 from figures in pdf’s using a vector graphics editor (<a href="https://inkscape.org/">Inkscape</a>),
 a text editor, and a spreadsheet software. In principle, any other
@@ -34,8 +35,8 @@ am using <a href="https://www.libreoffice.org/discover/calc/">LibreOffice
 Calc</a>. Before we began, we have to understand I little about
 digital graphic formats.</p>
 <p class="western" style="margin-left: 2.49cm; margin-right: 2.49cm; margin-top: 1.27cm; margin-bottom: 0cm; line-height: 200%">
-<font color="#444444"><font face="cmr10"><font size="5" style="font-size: 18pt"><b>Digital
-graphic formats</b></font></font></font></p>
+<font face="cmr10"><font size="5" style="font-size: 18pt"><b>Digital
+graphic formats</b></font></font></p>
 <p class="western">We can split up digital images into two groups:
 <a href="https://en.wikipedia.org/wiki/Vector_graphics">vector</a> or
 <a href="https://en.wikipedia.org/wiki/Raster_graphics">raster</a>
@@ -45,9 +46,8 @@ graphics. The mais difference between then is that raster graphics
 an example of raster image. Note that, if you zoom in on the image,
 the image starts to get blurry.</p>
 <p class="western" align="center" style="margin-left: 2.49cm; margin-right: 2.49cm; margin-top: 0.99cm; margin-bottom: 0.99cm; line-height: 200%">
-<font color="#444444"><img src="raster_solid.png" name="Image3" align="bottom" hspace="29" vspace="29" width="526" height="311" border="0"/>
+<img src="raster_solid.png" name="Image3" align="bottom" hspace="29" vspace="29" width="526" height="311" border="0"/>
 
-</font>
 </p>
 <p class="western">Below, we have an example of a vector image. Note
 that, no matter how much you zoom in on the image there is no blur.
@@ -56,9 +56,8 @@ figures or presentation on big screens. Raster images should be
 preferred mostly when the image is a photograph (sometimes, heatmaps
 are also better presented using raster format).</p>
 <p class="western" align="center" style="margin-left: 2.49cm; margin-right: 2.49cm; margin-top: 0.99cm; margin-bottom: 0.99cm; line-height: 200%">
-<font color="#444444"><img src="output.svg" name="Image1" align="bottom" hspace="29" vspace="29" width="520" height="307" border="0"/>
+<img src="output.svg" name="Image1" align="bottom" hspace="29" vspace="29" width="520" height="307" border="0"/>
 
-</font>
 </p>
 <p class="western" align="left" style="margin-left: 0cm; margin-right: 2.49cm; margin-top: 0.99cm; margin-bottom: 0.99cm; line-height: 200%">
 <br/>
@@ -71,11 +70,11 @@ are also better presented using raster format).</p>
 
 </p>
 <p class="western" style="margin-left: 2.49cm; margin-right: 2.49cm; margin-top: 0.99cm; margin-bottom: 0.99cm; line-height: 200%">
-<font color="#444444"><font face="cmr10"><font size="4" style="font-size: 15pt">We
-can split up digital images into two groups: vector or raster
-graphics. Raster images are made o pixels and vector images are made
-of vector points. The figure on the left is an example of vector
-image, while the figure on the right is an example of raster image</font></font></font></p>
+<font face="cmr10"><font size="4" style="font-size: 15pt">We can
+split up digital images into two groups: vector or raster graphics.
+Raster images are made o pixels and vector images are made of vector
+points. The figure on the left is an example of vector image, while
+the figure on the right is an example of raster image</font></font></p>
 <p class="western" style="margin-left: 2.49cm; margin-right: 2.49cm; margin-top: 0.99cm; margin-bottom: 0.99cm; line-height: 200%">
 <font color="#444444"><font face="cmr10"><font size="4" style="font-size: 15pt">He
 heard quiet steps. Who could be following him this late at night and
