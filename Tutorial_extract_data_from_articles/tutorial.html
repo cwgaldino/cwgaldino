@@ -7,242 +7,298 @@
 	<meta name="author" content="Carlos Galdino"/>
 	<meta name="created" content="2020-06-13T16:47:46.136412439"/>
 	<meta name="changedby" content="Carlos Galdino"/>
-	<meta name="changed" content="2020-06-14T17:04:04.088233452"/>
+	<meta name="changed" content="2020-06-16T16:49:42.086188697"/>
 	<style type="text/css">
+	body{margin:40px auto;
+	max-width:800px;
+	line-height:1.6;
+	font-size:18px;
+	color:#444;
+	padding:0 10px}
 		@page { size: 21.01cm 29.69cm; margin-left: 2.95cm; margin-right: 0.99cm }
-		p { margin-left: 3cm; margin-right: 3cm; color: #444444; line-height: 200%; page-break-before: auto }
-		p.western { font-family: "cmr10"; font-size: 15pt }
-		h1 { margin-left: 3cm; margin-right: 3cm; color: #444444; line-height: 200%; page-break-before: auto }
-		p.sdfootnote-western { margin-bottom: 0cm; font-family: "cmr10"; font-size: 10pt }
-		p.sdfootnote-cjk { margin-bottom: 0cm; font-size: 10pt }
-		p.sdfootnote-ctl { margin-bottom: 0cm; font-size: 10pt }
+		p { margin-bottom: 0cm; color: #444444; line-height: 200%; page-break-before: auto; page-break-after: auto }
+		p.western { font-family: "cmr10"; font-size: 15pt; font-weight: normal }
+		p.sdfootnote-western { font-family: "cmr10"; font-size: 11pt; font-weight: normal; page-break-before: auto; page-break-after: auto }
+		p.sdfootnote-cjk { font-size: 10pt; page-break-before: auto; page-break-after: auto }
+		p.sdfootnote-ctl { font-size: 10pt; page-break-before: auto; page-break-after: auto }
+		h2 { color: #444444; line-height: 200%; page-break-before: auto }
+		h2.western { font-family: "Roboto"; font-size: 16pt }
+		h2.cjk { font-family: "Noto Sans CJK SC"; font-size: 14pt }
+		h2.ctl { font-family: "Lohit Devanagari"; font-size: 14pt }
 	</style>
 </head>
 <body lang="en-US" text="#444444" bgcolor="#ffffff" dir="ltr">
-<h1 style="margin-left: 0.64cm; margin-right: 1.12cm; background: transparent; page-break-after: avoid">
-<br/>
-<br/>
-
-</h1>
-<p align="left" style="margin-top: 0.42cm; page-break-after: avoid"><font face="Roboto"><font size="7" style="font-size: 36pt"><b>Extract
-data from figures using Inkscape</b></font></font></p>
+<p align="left" style="margin-top: 4cm; margin-bottom: 0.5cm; page-break-before: auto; page-break-after: avoid"><a name="top"></a>
+<font face="Roboto"><font size="6" style="font-size: 28pt"><b>Extract
+data from figures using <font color="#444444">Inkscape</font></b></font></font></p>
 <p class="sdfootnote-western">Last edited: <sdfield type=DATETIME sdval="43996.5204159664" sdnum="1033;1033;MM/DD/YY">06/14/20</sdfield></p>
 <p class="western">In this tutorial, we are going to extract data
 from figures in pdf’s using a vector graphics editor (<a href="https://inkscape.org/">Inkscape</a>),
-a text editor, and a spreadsheet software. In principle, any other
-vector graphics editor will work. As for the spreadsheet software, I
-am using <a href="https://www.libreoffice.org/discover/calc/">LibreOffice
-Calc</a>. Before we began, we have to understand I little about
-digital graphic formats.</p>
-<p class="western" style="margin-left: 2.49cm; margin-right: 2.49cm; margin-top: 1.27cm; margin-bottom: 0cm; line-height: 200%">
-<font face="cmr10"><font size="5" style="font-size: 18pt"><b>Digital
-graphic formats</b></font></font></p>
-<p class="western">We can split up digital images into two groups:
-<a href="https://en.wikipedia.org/wiki/Vector_graphics">vector</a> or
-<a href="https://en.wikipedia.org/wiki/Raster_graphics">raster</a>
-graphics. The mais difference between then is that raster graphics
-(.png, .jpg, ...) are made of pixels, while vector graphics (.svg,
-.eps, ...) are made of vector cartesian points. The figure below is
-an example of raster image. Note that, if you zoom in on the image,
-the image starts to get blurry.</p>
-<p class="western" align="center" style="margin-left: 2.49cm; margin-right: 2.49cm; margin-top: 0.99cm; margin-bottom: 0.99cm; line-height: 200%">
-<img src="raster_solid.png" name="Image3" align="bottom" hspace="29" vspace="29" width="526" height="311" border="0"/>
-
+a text editor (<a href="https://atom.io/">Atom</a>), and a
+spreadsheet software (<a href="https://www.libreoffice.org/discover/calc/">LibreOffice
+Calc</a>). Note that, this method is not bound by this choice of
+applications and you may use your preferred ones.</p>
+<p class="western">As an example, I have created this <a href="tutorial/article_example.pdf">dummy
+pdf article</a> which we will use trough out this tutorial. The
+example article has figures with graphs using either solid curves or
+scattered points. Also, half of the figures are in a <a href="https://en.wikipedia.org/wiki/Vector_graphics">vector</a>
+format and the other half are in a <a href="https://en.wikipedia.org/wiki/Raster_graphics">raster</a>
+format. Roughly speaking, the main difference between them is that
+raster graphics (.png, .jpg, ...) are made of pixels, while vector
+graphics (.svg, .eps, ...) are made of vector Cartesian points. In
+the figure below we can clearly see the difference between them. Note
+that, no matter how much you zoom in on the figure below, there is no
+blur in the vector part. This is what makes vector format perfect for
+high-quality publication figures or presentation on big screens.
+Raster images should be preferred mostly when the image is a
+photograph (sometimes heatmaps are also better presented using raster
+format).</p>
+<p class="western" align="center">
+<img src="raster_vector.svg" name="Image1" align="bottom" width="492" height="326" border="0"/>
 </p>
-<p class="western">Below, we have an example of a vector image. Note
-that, no matter how much you zoom in on the image there is no blur.
-This is what makes vector format perfect for high-quality publication
-figures or presentation on big screens. Raster images should be
-preferred mostly when the image is a photograph (sometimes, heatmaps
-are also better presented using raster format).</p>
-<p class="western" align="center" style="margin-left: 2.49cm; margin-right: 2.49cm; margin-top: 0.99cm; margin-bottom: 0.99cm; line-height: 200%">
-<img src="output.svg" name="Image1" align="bottom" hspace="29" vspace="29" width="520" height="307" border="0"/>
-
+<p class="western">The figure above is a montage of figures 1 and 3
+in the example pdf. Be aware that, we can only extract data from
+vector images, so there is this other tutorial that will show you h<font color="#ce181e">ow
+to convert raster images (graphs and plots) to a vector format</font>.
+Also, we need the figure to be formed by solid lines. If the curves
+are represented by scattered points, as in figures 2 and 4 in the
+example article, we have to transform them into solid lines. For
+that, we may use the same method applied for <font color="#ce181e">vectorizing
+raster images</font>.
 </p>
-<p class="western" align="left" style="margin-left: 0cm; margin-right: 2.49cm; margin-top: 0.99cm; margin-bottom: 0.99cm; line-height: 200%">
-<br/>
-<br/>
-
-</p>
-<p class="western" style="margin-left: 2.49cm; margin-right: 2.49cm; margin-top: 0.99cm; margin-bottom: 0.99cm; line-height: 200%">
-<br/>
-<br/>
-
-</p>
-<p class="western" style="margin-left: 2.49cm; margin-right: 2.49cm; margin-top: 0.99cm; margin-bottom: 0.99cm; line-height: 200%">
-<font face="cmr10"><font size="4" style="font-size: 15pt">We can
-split up digital images into two groups: vector or raster graphics.
-Raster images are made o pixels and vector images are made of vector
-points. The figure on the left is an example of vector image, while
-the figure on the right is an example of raster image</font></font></p>
-<p class="western" style="margin-left: 2.49cm; margin-right: 2.49cm; margin-top: 0.99cm; margin-bottom: 0.99cm; line-height: 200%">
-<font color="#444444"><font face="cmr10"><font size="4" style="font-size: 15pt">He
-heard quiet steps. Who could be following him this late at night and
-in this deadbeat part of town? And at this particular moment, just
-after he pulled off the big time and was making off with the
-greenbacks. Was there another crook who'd had the same idea, and was
-now <a href="Epics/Epics.html">watching</a> him and waiting for a
-chance to grab the fruit of his labor? Or did the steps behind him
-mean that one of many law officers in town was on to him and just
-waiting to pounce and snap those cuffs on his wrists? He nervously
-looked all around. Suddenly he saw the alley. Like lightning he
-darted off to the left and disappeared between the two warehouses
-almost falling over the trash can lying in the middle of the
-sidewalk. He tried to nervously tap his way along in the inky
-darkness and suddenly stiffened: it was a dead-end, he would have to
-go back the way he had come. The steps got louder and louder, he saw
-the black outline of a figure coming around the corner. Is this the
-end of the line? he <a href="../Tutorial_extract_data_from_articles">thought</a>
-pressing himself back against the wall trying to make himself
-invisible in the dark, was all that planning and energy wasted? He
-was dripping with sweat now, cold and wet, he could smell the fear
-coming off his clothes. Suddenly next to him, with a barely
-noticeable squeak, a door swung quietly to and fro in the night's
-breeze. Could this be the haven he'd prayed for? Slowly he slid
-toward the door, pressing himself more and more into the wall, into
-the dark, away from his enemy. Would this door save his hide?</font></font></font></p>
-<p class="western" style="margin-left: 2.49cm; margin-right: 2.49cm; margin-top: 0.99cm; margin-bottom: 0.99cm; line-height: 200%">
-<font color="#444444"><font face="cmr10"><font size="4" style="font-size: 15pt">He
-heard quiet steps behind him. That didn't bode well. Who could be
-following him this late at night and in this deadbeat part of town?
-And at this particular moment, just after he pulled off the big time
-and was making off with the greenbacks. Was there another crook who'd
-had the same idea, and was now <a href="Epics/Epics.html">watching</a>
-him and waiting for a chance to grab the fruit of his labor? Or did
-the steps behind him mean that one of many law officers in town was
-on to him and just waiting to pounce and snap those cuffs on his
-wrists? He nervously looked all around. Suddenly he saw the alley.
-Like lightning he darted off to the left and disappeared between the
-two warehouses almost falling over the trash can lying in the middle
-of the sidewalk. He tried to nervously tap his way along in the inky
-darkness and suddenly stiffened: it was a dead-end, he would have to
-go back the way he had come. The steps got louder and louder, he saw
-the black outline of a figure coming around the corner. Is this the
-end of the line? he <a href="../Tutorial_extract_data_from_articles">thought</a>
-pressing himself back against the wall trying to make himself
-invisible in the dark, was all that planning and energy wasted? He
-was dripping with sweat now, cold and wet, he could smell the fear
-coming off his clothes. Suddenly next to him, with a barely
-noticeable squeak, a door swung quietly to and fro in the night's
-breeze. Could this be the haven he'd prayed for? Slowly he slid
-toward the door, pressing himself more and more into the wall, into
-the dark, away from his enemy. Would this door save his hide?</font></font></font></p>
-<p class="western" style="margin-left: 6.35cm; margin-right: 7.62cm; margin-bottom: 0cm; border-top: none; border-bottom: 2.50pt solid #808080; border-left: none; border-right: none; padding-top: 0cm; padding-bottom: 0.05cm; padding-left: 0cm; padding-right: 0cm; line-height: 0.25cm">
-<br/>
-
-</p>
-<p class="western" style="margin-left: 2.49cm; margin-right: 2.49cm; margin-top: 0.99cm; margin-bottom: 0.99cm; line-height: 200%">
-<font color="#444444"><font face="cmr10"><font size="4" style="font-size: 15pt">He
-heard quiet steps behind him. That didn't bode well. Who could be
-following him this late at night and in this deadbeat part of town?
-And at this particular moment, just after he pulled off the big time
-and was making off with the greenbacks. Was there another crook who'd
-had the same idea, and was now <a href="Epics/Epics.html">watching</a>
-him and waiting for a chance to grab the fruit of his labor? Or did
-the steps behind him mean that one of many law officers in town was
-on to him and just waiting to pounce and snap those cuffs on his
-wrists? He nervously looked all around. Suddenly he saw the alley.
-Like lightning he darted off to the left and disappeared between the
-two warehouses almost falling over the trash can lying in the middle
-of the sidewalk. He tried to nervously tap his way along in the inky
-darkness and suddenly stiffened: it was a dead-end, he would have to
-go back the way he had come. The steps got louder and louder, he saw
-the black outline of a figure coming around the corner. Is this the
-end of the line? he <a href="../Tutorial_extract_data_from_articles">thought</a>
-pressing himself back against the wall trying to make himself
-invisible in the dark, was all that planning and energy wasted? He
-was dripping with sweat now, cold and wet, he could smell the fear
-coming off his clothes. Suddenly next to him, with a barely
-noticeable squeak, a door swung quietly to and fro in the night's
-breeze. Could this be the haven he'd prayed for? Slowly he slid
-toward the door, pressing himself more and more into the wall, into
-the dark, away from his enemy. Would this door save his hide?</font></font></font></p>
-<p class="western" align="left" style="margin-left: 0.71cm; margin-right: 1.4cm; line-height: 115%; background: transparent; page-break-before: auto; page-break-after: auto">
-<a href="test.png">
-  <img src="test.png" name="Image2" align="right" hspace="48" width="327" height="328" border="0"/>
+<h2 class="western">Step-by-step <b>instructions</b></h2>
+<p class="western">1. Download, install and open Inkscape.</p>
+<p class="western">2. Click and drag the pdf file into Inkscape.</p>
+<p class="western"><a href="tutorial_html_4228efbc467b1e45.gif">
+  <img src="tutorial_html_4228efbc467b1e45.gif" name="Image2" align="bottom" width="787" height="460" border="0"/>
 </a>
-<font face="cmr10"><font size="4" style="font-size: 15pt">He
-heard quiet steps behind him. That didn't bode well. Who could be
-following him this late at night and in this deadbeat part of town?
-And at this particular moment, just after he pulled off the big time
-and was making off with the greenbacks. Was there another crook who'd
-had the same idea, and was now watching him and waiting for a chance
-to grab the fruit of his labor? Or did the steps behind him mean that
-one of many law officers in town was on to him and just waiting to
-pounce and snap those cuffs on his wrists? He nervously looked all
-around. Suddenly he saw the alley. Like lightning he darted off to
-the left and disappeared between the two warehouses almost falling
-over the trash can lying in the middle of the sidewalk. He tried to
-nervously tap his way along in the inky darkness and suddenly
-stiffened: it was a dead-end, he would have to go back the way he had
-come. The steps got louder and louder, he saw the black outline of a
-figure coming around the corner. Is this the end of the line? he
-thought pressing himself back against the wall trying to make himself
-invisible in the dark, was all that planning and energy wasted? He
-was dripping with sweat now, cold and wet, he could smell the fear
-coming off his clothes. Suddenly next to him, with a barely
-noticeable squeak, a door swung quietly to and fro in the night's
-breeze. Could this be the haven he'd prayed for? Slowly he slid
-toward the door, pressing himself more and more into the wall, into
-the dark, away from his enemy. Would this door save his hide?</font></font></p>
-<p class="western" style="margin-left: 0.81cm; margin-right: 1.4cm; line-height: 150%; background: transparent; page-break-before: auto; page-break-after: auto">
-He heard quiet steps behind him. That didn't bode well. Who could be
-following him this late at night and in this deadbeat part of town?
-And at this particular moment, just after he pulled off the big time
-and was making off with the greenbacks. Was there another crook who'd
-had the same idea, and was now watching him and waiting for a chance
-to grab the fruit of his labor? Or did the steps behind him mean that
-one of many law officers in town was on to him and just waiting to
-pounce and snap those cuffs on his wrists? He nervously looked all
-around. Suddenly he saw the alley. Like lightning he darted off to
-the left and disappeared between the two warehouses almost falling
-over the trash can lying in the middle of the sidewalk. He tried to
-nervously tap his way along in the inky darkness and suddenly
-stiffened: it was a dead-end, he would have to go back the way he had
-come. The steps got louder and louder, he saw the black outline of a
-figure coming around the corner. Is this the end of the line? he
-thought pressing himself back against the wall trying to make himself
-invisible in the dark, was all that planning and energy wasted? He
-was dripping with sweat now, cold and wet, he could smell the fear
-coming off his clothes. Suddenly next to him, with a barely
-noticeable squeak, a door swung quietly to and fro in the night's
-breeze. Could this be the haven he'd prayed for? Slowly he slid
-toward the door, pressing himself more and more into the wall, into
-the dark, away from his enemy. Would this door save his hide?</p>
-<p class="western" style="margin-left: 0.81cm; margin-right: 1.4cm; background: transparent; page-break-before: auto; page-break-after: auto">
-He heard quiet steps behind him. That didn't bode well. Who could be
-following him this late at night and in this deadbeat part of town?
-And at this particular moment, just after he pulled off the big time
-and was making off with the greenbacks. Was there another crook who'd
-had the same idea, and was now watching him and waiting for a chance
-to grab the fruit of his labor? Or did the steps behind him mean that
-one of many law officers in town was on to him and just waiting to
-pounce and snap those cuffs on his wrists? He nervously looked all
-around. Suddenly he saw the alley. Like lightning he darted off to
-the left and disappeared between the two warehouses almost falling
-over the trash can lying in the middle of the sidewalk. He tried to
-nervously tap his way along in the inky darkness and suddenly
-stiffened: it was a dead-end, he would have to go back the way he had
-come. The steps got louder and louder, he saw the black outline of a
-figure coming around the corner. Is this the end of the line? he
-thought pressing himself back against the wall trying to make himself
-invisible in the dark, was all that planning and energy wasted? He
-was dripping with sweat now, cold and wet, he could smell the fear
-coming off his clothes. Suddenly next to him, with a barely
-noticeable squeak, a door swung quietly to and fro in the night's
-breeze. Could this be the haven he'd prayed for? Slowly he slid
-toward the door, pressing himself more and more into the wall, into
-the dark, away from his enemy. Would this door save his hide?</p>
-<p class="western" style="margin-left: 0.81cm; margin-right: 1.4cm; background: transparent">
-dsfsdjfçlkjsdçlf</p>
-<p class="western" style="margin-left: 0.81cm; margin-right: 1.4cm; background: transparent">
-sfijsadçlkfjsçaldkjfçsaldkjfçsadlkjfçlsadkjf çlkjsd flksdj
-fçlksdj flksd jfçlskd jfçsa dfjlçk sdfj sdlkfj sdlçkfj sdçlkf
-sdlkf sdfj sçdlkfj sçlkdf sd fjçlksd jfçlksd jfçlkas dfjçlk
-sdjfl skçdfj sldkfj çsldkfj çsdlka jfçlsd jfçlksd jfçklsd
-fjçlksd jfçlksdj fçlksjda f.</p>
-<p class="western"><br/>
+<a href="tutorial_html_4228efbc467b1e45.gif">
+</a>
+</p>
+<p class="western">3. Zoom in on figure 1, click over it couple of
+times until the figure is selected. Then, drag it elsewhere so you
+can select and delete the everything else.</p>
+<p class="western"><a href="tutorial_html_316260eee02f956c.gif">
+  <img src="tutorial_html_316260eee02f956c.gif" name="Image4" align="bottom" width="787" height="478" border="0"/>
+</a>
+<a href="tutorial_html_316260eee02f956c.gif">
+</a>
+</p>
+<p class="western">4. Check if the figure is a “clone”. You may
+check at the status bar down below after selecting the image. If the
+image is a clone, with the image selected, go to <span style="font-style: normal">Edit
+</span><font face="cmmi10"><span style="font-style: normal">&gt;
+</span></font><span style="font-style: normal">Clone </span><font face="cmmi10"><span style="font-style: normal">&gt;
+   </span></font><span style="font-style: normal"> Unlink Clones
+recursively.</span></p>
+<p class="western"><a href="tutorial_html_ff8d7aeb626347b5.gif">
+  <img src="tutorial_html_ff8d7aeb626347b5.gif" name="Image5" align="bottom" width="787" height="478" border="0"/>
+</a>
+
+</p>
+<p class="western"><b>Note</b><b>:</b> Sometimes, when importing
+figures from pdf’s, new objects may disappear outside of the
+“figure area”. I think that is a bug in which the “layers” of
+the svg file are not formatted properly. If this bothers you, a
+possible fix is to just add a new layer and ungroup the objects.</p>
+<p class="western"><a href="tutorial_html_b9e44457e4f624e.gif">
+  <img src="tutorial_html_b9e44457e4f624e.gif" name="Image13" align="bottom" width="787" height="479" border="0"/>
+</a>
+</p>
+<p class="western">5. Use the nodes tool to select all nodes in the
+curve. Then, with all nodes selected, click in the button add nodes.
+This will add one extra node between two existing nodes. You may
+click the add nodes button more than once to increase the number of
+nodes (in this case twice is enough). Finally, transform all nodes to
+segment lines by clicking the button “Make selected segments
+lines”. Sometimes, I notice that to click this button only once do
+not work (maybe this is something of early versions of Inkscape,), so
+I like to make segments lines, then make selected nodes symmetric,
+then making them segments lines again.</p>
+<p class="western"><a href="tutorial_html_e6c318f98cafc72e.gif">
+  <img src="tutorial_html_e6c318f98cafc72e.gif" name="Image8" align="bottom" width="787" height="478" border="0"/>
+</a>
+
+</p>
+<p class="western">6. Check the name of the objected of interest. In
+this case, the red curve. Click on the curve (you may need to click
+more then once to select the curve, because there is a high change
+the different objects are grouped), then open the Objects dialog in
+Objects<span style="font-style: normal"> </span><font face="cmmi10"><span style="font-style: normal">&gt;
+   </span></font><span style="font-style: normal"> </span> Objects.
+In this case, the name of the red curve is “path16271”.</p>
+<p class="western"><a href="tutorial_html_26ca99603157a73a.gif">
+  <img src="tutorial_html_26ca99603157a73a.gif" name="Image6" align="bottom" width="787" height="478" border="0"/>
+</a>
+
+</p>
+<p class="western">7. Save the file. I saved as drawing.svg.</p>
+<p class="western">8. Download, Install, and open Atom. Or you may
+use any other text editor as long as it has the ability to find and
+replace text.</p>
+<p class="western">9. Open Drawing.svg in Atom. We may do that by
+clicking and draging the .svg file to Atom.</p>
+<p class="western"><a href="tutorial_html_e601c82b1336913.gif">
+  <img src="tutorial_html_e601c82b1336913.gif" name="Image7" align="bottom" width="787" height="479" border="0"/>
+</a>
+
+</p>
+<p class="western">10. Find “path1627” in the file (ctrl+f). The
+object has many attributes, like id, transform, etc… The one we are
+interested is “d”. This tells us all of the Cartesian points that
+form the curve. Copy all of the text after “d=” and paste in
+another file. The shortcut for a new file in Atom is ctrl+n.</p>
+<p class="western"><a href="tutorial_html_96b7ab9dcaaa77f3.gif">
+  <img src="tutorial_html_96b7ab9dcaaa77f3.gif" name="Image9" align="bottom" width="787" height="479" border="0"/>
+</a>
+
+</p>
+<p class="western">11. Find and replace all spaces by “<font face="STIX">\</font>n”,
+which is a digital representation of a new line. Make sure that “Use
+Regex” is enabled.</p>
+<p class="western"><a href="tutorial_html_7825bcff5a0c2ccb.gif">
+  <img src="tutorial_html_7825bcff5a0c2ccb.gif" name="Image10" align="bottom" width="787" height="479" border="0"/>
+</a>
+
+</p>
+<p class="western">11. Erase the “m” in the first line and give
+it a quick check to see if it has a pair of number separated by a
+comma in all rows. These are (x, y) Cartesian coordinates that draw
+the curve on the screen. The “m” that we just erased was a
+instruction for how to interpret the following Cartesian points, that
+stands for “move”. This means that only absolute point is the
+first one and all of the subsequent points are relative to the
+previous point at the row above.
+</p>
+<p class="western">If the instruction is not “m”, we have to be
+careful about how to interpret the (x, y) coordinates. Other
+instructions like “l”, which stands for “line”, will also
+work as “m”. If the first letter is not “m” nor “l” or if
+you have multiple instructions along the file (letters in other rows
+other than the first one), go back and do item 5 again. If necessary,
+<a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths">here</a>
+is a list of other instructions that svg files use to construct
+paths.</p>
+<p class="western"><a href="tutorial_html_99d43e4010ba75b7.gif">
+  <img src="tutorial_html_99d43e4010ba75b7.gif" name="Image11" align="bottom" width="787" height="479" border="0"/>
+</a>
+
+</p>
+<p class="western">12. Save the file as data.txt.</p>
+<p class="western"><a name="cwos"></a>13. Now, before going any
+further, we need to go back to Inkscape and find the exact (x, y)
+coordinates of the <u>first</u> and the <u>last</u> data point. In
+this example, it is not clear what are the (x, y) values of the first
+data point, mostly because of the poor number of ticks in the y and x
+axes.</p>
+<p class="western">There are many ways we can use to find the exact
+values the data points. Here, I am showing one possible way of how we
+can do it using <a href="https://en.wikipedia.org/wiki/Cross-multiplication">Cross-multiplication</a>
+and Inkscape. Firstly, use the Belzier tool to draw lines (hold ctrl
+to make straight lines and use double click to draw the line). If
+necessary, there are many of tutorials on the internet on how to use
+this tool. By paying attetion to the size of these lines we are able
+to transform between spacial coordinates to the “graph units”.
+Particularly, in this example (see below), we know that 11.964 mm is
+equivalent to 0.5, therefore, 18.246 is equivalent to 0.7625. This
+means that the y coordinate of the first data point is 0.7625.
+</p>
+<p class="western"><a href="tutorial_html_50fcfe9dfbaa020.gif">
+  <img src="tutorial_html_50fcfe9dfbaa020.gif" name="Image12" align="bottom" width="787" height="479" border="0"/>
+</a>
+
+</p>
+<p class="western">If we do the same for the x coordinate of the
+first data point (see below), we will see that 12.706 mm is
+equivalent to 5, therefore, 2.532 is equivalent to 0.9964. This means
+that the x coordinate of the first data point is 0.9968.
+</p>
+<p class="western"><a href="tutorial_html_68de17876c64bd6d.gif">
+  <img src="tutorial_html_68de17876c64bd6d.gif" name="Image15" align="bottom" width="787" height="479" border="0"/>
+</a>
+
+</p>
+<p class="western">Finally, if we do the same for the last data
+point, we will see that its coordinates are roughly (25, 0.0114).</p>
+<p class="western">
+</p>
+<p class="western">14. Open a spreadsheet software (in this case
+LibreOffice Calc). Click and drag data.txt to the spreadsheet and
+import data using comma as a separator.</p>
+<p class="western"><a href="tutorial_html_3f5e3d09091e356e.gif">
+  <img src="tutorial_html_3f5e3d09091e356e.gif" name="Image14" width="787" height="479" border="0"/>
+</a>
+
+</p>
+<p class="western">16. It is useful to rearrange the spreadsheet to
+look something like the image below. Note that, we have the
+coordinates of the first and last data point that we found in item
+13. Also, we have two values defined as Delta x and Delta y which are
+the difference between the value of the last and first data points
+for x and y, respectively. Cell B10 is just “=B6-B2”, while B11
+is “=B7-B3”.
+</p>
+<p class="western"><a href="tutorial_html_af848403535ca623.gif">
+  <img src="tutorial_html_af848403535ca623.gif" name="Image16" align="bottom" width="787" height="481" border="0"/>
+</a>
+
+</p>
+<p class="western">17. Cells D2 and E2 are the only ones that have
+data points with absolute values. The following rows have relative
+coordinates. We can make all data points absolute by making the first
+data point (0, 0) in columns F and G and use the appropriate formula
+in the following rows (see below).</p>
+<p class="western"><a href="tutorial_html_3873c096412c4226.gif">
+  <img src="tutorial_html_3873c096412c4226.gif" name="Image19" align="bottom" width="787" height="479" border="0"/>
+</a>
+</p>
+<p class="western">18.  The data points of columns F and G are in
+“drawing units” (cm, mm, in, …). By subtracting the value of
+the last and first data points in these columns we can fill out cells
+B14 and B15.
+</p>
+<p class="western"><a href="tutorial_html_67d924ce936660ae.gif">
+  <img src="tutorial_html_67d924ce936660ae.gif" name="Image17" align="bottom" width="787" height="501" border="0"/>
+</a>
+
+</p>
+<p class="western">19. We must then define the calibration factor
+that will help us go from “drawing units” to “real units”.
+The calibration factor for the x coordinate is given by “=B10/B14”
+while the one for y is “=B11/B15”.</p>
+<p class="western"><a href="tutorial_html_4cc82b6091c9cbfd.gif">
+  <img src="tutorial_html_4cc82b6091c9cbfd.gif" name="Image18" align="bottom" width="787" height="501" border="0"/>
+</a>
+
+</p>
+<p class="western">20. The final data points can be found by
+multiplying each data point by the calibration factor and adding the
+value of the first data point for the x and y coordinates (See
+below).</p>
+<p class="western"><a href="tutorial_html_5ceafd8cd56405f4.gif">
+  <img src="tutorial_html_5ceafd8cd56405f4.gif" name="Image20" align="bottom" width="787" height="479" border="0"/>
+</a>
+
+</p>
+<p class="western">21. Done! Columns H and I are the x and y values
+of the data points. The figure below shows a plot of these columns.
+Finally, we can export these columns to a text file and use it
+elsewhere.</p>
+<p class="western"><a href="tutorial_html_cb14165c020d29d9.gif">
+  <img src="tutorial_html_cb14165c020d29d9.gif" name="Image21" align="bottom" width="787" height="501" border="0"/>
+</a>
+
+</p>
+<p style="margin-left: 10cm; margin-right: 10cm; margin-bottom: 0.5cm; border-top: none; border-bottom: 5.00pt solid #808080; border-left: none; border-right: none; padding: 0cm; font-weight: normal; page-break-before: auto; page-break-after: auto">
 <br/>
+<br/>
+
+</p>
+<p class="western">Send me an Email if this was useful to you. This
+motivates me to keep these tutorials online.
+</p>
+<p class="western"><a href="#top">Go to top</a></p>
+<p class="western"><br/>
 
 </p>
 </body>

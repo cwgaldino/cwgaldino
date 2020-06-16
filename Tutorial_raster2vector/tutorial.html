@@ -1,0 +1,280 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 6.0.7.3 (Linux)"/>
+	<meta name="author" content="Carlos Galdino"/>
+	<meta name="created" content="2020-06-13T16:47:46.136412439"/>
+	<meta name="changedby" content="Carlos Galdino"/>
+	<meta name="changed" content="2020-06-15T14:19:50.506917042"/>
+	<style type="text/css">
+		@page { size: 21.01cm 29.69cm; margin-left: 2.95cm; margin-right: 0.99cm }
+		p { margin-left: 3cm; margin-right: 3cm; color: #444444; line-height: 200%; page-break-before: auto; page-break-after: auto }
+		p.western { font-family: "cmr10"; font-size: 15pt }
+		p.sdfootnote-western { margin-bottom: 1.15cm; font-family: "cmr10"; font-size: 11pt; font-weight: normal; line-height: 100%; page-break-before: auto; page-break-after: auto }
+		p.sdfootnote-cjk { margin-bottom: 1.15cm; font-size: 10pt; line-height: 100%; page-break-before: auto; page-break-after: auto }
+		p.sdfootnote-ctl { margin-bottom: 1.15cm; font-size: 10pt; line-height: 100%; page-break-before: auto; page-break-after: auto }
+	</style>
+</head>
+<body lang="en-US" text="#444444" bgcolor="#ffffff" dir="ltr">
+<p class="western" align="left" style="margin-top: 2cm; page-break-after: avoid">
+<font face="Roboto"><font size="6" style="font-size: 28pt"><b>Extract
+data from figures using Inkscape</b></font></font></p>
+<p class="sdfootnote-western">Last edited: <sdfield type=DATETIME sdval="43996.5204159664" sdnum="1033;1033;MM/DD/YY">06/14/20</sdfield></p>
+<p class="western">In this tutorial, we are going to extract data
+from figures in pdf’s using a vector graphics editor (<a href="https://inkscape.org/">Inkscape</a>),
+a text editor, and a spreadsheet software. In principle, any vector
+graphics editor will work. As for the spreadsheet software, I am
+using <a href="https://www.libreoffice.org/discover/calc/">LibreOffice
+Calc</a>. Also, I have created <a href="../Tutorial_extract_data_from_articles">this</a>
+dummy pdf article which we will use as an example trough out this
+tutorial. The article has figures with graphs using either solid
+curves or scattered points. 
+</p>
+<p class="western">Before we begin, we have to understand I little
+about digital graphic formats. Roughly speaking, we can divide
+digital images into two groups: <a href="https://en.wikipedia.org/wiki/Vector_graphics">vector</a>
+or <a href="https://en.wikipedia.org/wiki/Raster_graphics">raster</a>
+graphics. The main difference between them is that raster graphics
+(.png, .jpg, ...) are made of pixels, while vector graphics (.svg,
+.eps, ...) are made of vector Cartesian points. The figure below is
+an example of raster image. Note that, if you zoom in on the image,
+the image starts to get blurry.</p>
+<p class="western" align="center" style="margin-left: 5.49cm; margin-right: 5.49cm; margin-top: 0.99cm; margin-bottom: 0.99cm; line-height: 200%">
+<img src="raster_solid.png" name="Image3" align="bottom" width="526" height="311" border="0"/>
+
+</p>
+<p class="western">Below, we have an example of a vector image. Note
+that, no matter how much you zoom in on the image there is no blur.
+This is what makes vector format perfect for high-quality publication
+figures or presentation on big screens. Raster images should be
+preferred mostly when the image is a photograph (sometimes, heatmaps
+are also better presented using raster format).</p>
+<p class="western" align="center" style="margin-left: 5.49cm; margin-right: 5.49cm; margin-top: 0.99cm; margin-bottom: 0.99cm; line-height: 200%">
+<img src="output.svg" name="Image1" align="bottom" width="520" height="307" border="0"/>
+
+</p>
+<p class="western">Firstly, I will show you how to extract data from
+vector images with solid lines. Them we will discuss how to do the
+same for figures with scattered points and for raster images.</p>
+<p class="western">1. Download, install and open Inkscape.</p>
+<p class="western">2. Click and drag the pdf file into Inkscape. See
+the gif below.</p>
+<p class="western"><img src="tutorial_html_4228efbc467b1e45.gif" name="Image2" align="bottom" width="787" height="460" border="0"/>
+
+</p>
+<p class="western">3. Zoom in on figure 1.1, click over it couple of
+times until the figure is selected. Then, drag it elsewhere so you
+can select and delete the text.</p>
+<p class="western"><img src="tutorial_html_316260eee02f956c.gif" name="Image4" align="bottom" width="787" height="478" border="0"/>
+
+</p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<p class="western"><img src="tutorial_html_ff8d7aeb626347b5.gif" name="Image5" align="bottom" width="787" height="478" border="0"/>
+
+</p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<p class="western"><img src="tutorial_html_e6c318f98cafc72e.gif" name="Image8" align="bottom" width="787" height="478" border="0"/>
+</p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<p class="western"><img src="tutorial_html_26ca99603157a73a.gif" name="Image6" align="bottom" width="787" height="478" border="0"/>
+
+</p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<p class="western"> 
+</p>
+<p class="western"><img src="tutorial_html_e601c82b1336913.gif" name="Image7" align="bottom" width="787" height="479" border="0"/>
+</p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<p class="western"><img src="tutorial_html_96b7ab9dcaaa77f3.gif" name="Image9" align="bottom" width="787" height="479" border="0"/>
+</p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<p class="western"><img src="tutorial_html_7825bcff5a0c2ccb.gif" name="Image10" align="bottom" width="787" height="479" border="0"/>
+</p>
+<p class="western">erase m and give it a quick check</p>
+<p class="western"><img src="tutorial_html_99d43e4010ba75b7.gif" name="Image11" align="bottom" width="787" height="479" border="0"/>
+</p>
+<p class="western">Save the file. data.txt</p>
+<p class="western"><a name="cwos"></a>We need to find the exact (x,
+y) coordinates of the first and the last data point. For that we can
+use <a href="https://en.wikipedia.org/wiki/Cross-multiplication">Cross-multiplication</a>
+to transform between Inkscape spacial coordinates to the “graph
+units”. From the gif below, we know that 11.964 mm is equivalent to
+0.5, therefore, 18.246 is equivalent to 0.7625. This means that the y
+coordinate of the first data point is 0.7625. 
+</p>
+<p class="western"><img src="tutorial_html_50fcfe9dfbaa020.gif" name="Image12" align="bottom" width="787" height="479" border="0"/>
+</p>
+<p class="western">If you do the same for the x coordinate of the
+first data point (see gif below), you will see that 12.706 mm is
+equivalent to 5, therefore, 2.532 is equivalent to 0.9964. This means
+that the x coordinate of the first data point is 0.9968. 
+</p>
+<p class="western"><img src="tutorial_html_68de17876c64bd6d.gif" name="Image15" align="bottom" width="787" height="479" border="0"/>
+</p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<p class="western"><a name="cwos2"></a>We have to do the same for the
+last data point. You will see that the coordinates of the last data
+point are roughly (25, 0.0114).</p>
+<p class="western">Inkscape has a bug that sometimes 
+</p>
+<p class="western"><img src="tutorial_html_b9e44457e4f624e.gif" name="Image13" align="bottom" width="787" height="479" border="0"/>
+</p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<p class="western"><img src="tutorial_html_3f5e3d09091e356e.gif" name="Image14" align="bottom" width="787" height="479" border="0"/>
+</p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<p class="western"><img src="tutorial_html_af848403535ca623.gif" name="Image16" width="787" height="481" border="0"/>
+</p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<p class="western"><img src="tutorial_html_3873c096412c4226.gif" name="Image19" align="bottom" width="787" height="479" border="0"/>
+</p>
+<p class="western"><img src="tutorial_html_67d924ce936660ae.gif" name="Image17" align="bottom" width="787" height="501" border="0"/>
+</p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<p class="western"><img src="tutorial_html_4cc82b6091c9cbfd.gif" name="Image18" align="bottom" width="787" height="501" border="0"/>
+</p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<p class="western"><img src="tutorial_html_5ceafd8cd56405f4.gif" name="Image20" align="bottom" width="787" height="479" border="0"/>
+</p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<p class="western"><img src="tutorial_html_cb14165c020d29d9.gif" name="Image21" align="bottom" width="787" height="501" border="0"/>
+</p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<p class="western"><br/>
+<br/>
+
+</p>
+<p class="western"><br/>
+<br/>
+
+</p>
+</body>
+</html>
