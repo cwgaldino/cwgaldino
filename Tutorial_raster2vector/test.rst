@@ -1,11 +1,14 @@
+
+|
+
 ###########################################################
 How to *vectorize* raster figures from scientific journals
 ###########################################################
-Created: 26/06/2020
 
-Last updated: 26/06/2020
 
-|
+.. attention:: Last updated: 26/06/2020
+
+
 
 `Vector images`_ are great for high-quality publication figures or presentations on big screens. In opposition, `raster graphics`_ are great for pixelated images, like photographs. Sometimes, it is useful to convert an image from a raster format (.png, .jpg, ...) to a vector format (.svg, .pdf, ...). There are many ways to do that and I'm gonna show you one simple way to that which works well for images with well defined lines and curves, e. g., graphs.
 
@@ -90,7 +93,12 @@ The final result will look something like this:
 .. image:: 12.gif
     :target: 12.gif
 
+|
 
+
+`Go to top`_.
+
+.. _`Go to top`: `How to vectorize raster figures from scientific journals`_
 
 
 |

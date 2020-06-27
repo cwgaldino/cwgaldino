@@ -21,7 +21,8 @@ THE SOFTWARE.
 
 body {
     font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
-    font-size: 16px;
+    font-size: 18px;
+    line-height:2;
     color: #111;
 }
 
@@ -36,6 +37,7 @@ div.document {
 h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
     margin-top: 1.5em;
+    line-height:1.2;
 }
 
 h1.section-subtitle,
@@ -70,7 +72,7 @@ object {
     display:        block;
     margin-left:    auto;
     margin-right:   auto;
-    width: 700px;
+    width: 650px;
 }
 
 div.figure {
@@ -399,6 +401,7 @@ div.warning {
     border: solid 1px #111;
     padding: 0 1em;
     background-color: #eee;
+    line-height:1.2;
 }
 
 div.error,
