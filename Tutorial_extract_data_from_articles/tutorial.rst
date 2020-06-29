@@ -31,7 +31,7 @@ Extract data from figures using Inkscape
     .. |date| date::
 
 
-qqIn this tutorial, we are going to extract data from figures in pdf’s using a vector graphics editor (`Inkscape`_), a text editor (`Atom`_), and a spreadsheet software (`LibreOffice Calc`_). Note that, this method is not bound by this choice of applications and you may use your preferred ones.
+In this tutorial, we are going to extract data from figures in pdf’s using a vector graphics editor (`Inkscape`_), a text editor (`Atom`_), and a spreadsheet software (`LibreOffice Calc`_). Note that, this method is not bound by this choice of applications and you may use your preferred ones.
 
 As an example, I have created this `dummy pdf article`_ which we will use trough out this tutorial. The example article has figures with graphs using either solid curves or scattered points. Also, half of the figures are in a `vector`_ format and the other half are in a `raster`_ format. Roughly speaking, the main difference between them is that raster graphics (.png, .jpg, ...) are made of pixels, while vector graphics (.svg, .eps, ...) are made of vector Cartesian points. In the figure below we can clearly see the difference between them. Note that, no matter how much you zoom in on the figure below, there is no blur in the vector part. This is what makes vector format perfect for high-quality publication figures or presentation on big screens. Raster images should be preferred mostly when the image is a photograph (sometimes heatmaps are also better presented using raster format).
 
