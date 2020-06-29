@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="Docutils 0.14: http://docutils.sourceforge.net/" />
-<title>Extract data from figures using Inkscape</title>
+<title>tutorial2.rst</title>
 <style type="text/css">
 
 /******************************************************************************
@@ -29,10 +29,11 @@ THE SOFTWARE.
 
 
 body {
-    font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    /* font-family: "STIXGeneral-Regular"; */
+    font-family: "cmr10";
     font-size: 18px;
-    line-height:2;
-    color: #111;
+    line-height:2.2;
+    color: #444;
 }
 
 div.document {
@@ -48,6 +49,10 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 1.5em;
     line-height:1.2;
 }
+
+/* h1 {
+    font-weight: bold;
+    font-family: "Roboto"} */
 
 h1.section-subtitle,
 h2.section-subtitle,
@@ -81,7 +86,7 @@ object {
     display:        block;
     margin-left:    auto;
     margin-right:   auto;
-    width: 650px;
+    width: 600px;
 }
 
 div.figure {
@@ -595,16 +600,29 @@ font-weight: bold }
 span.problematic {
 color: red }
 
+/* galdino */
 div.cc {
-    font-size: 10px;
+    font-size: 18px;
+    /* font-size: 10px; */
     line-height:1}
+
+div.name {
+    font-family: "Karumbi";
+    font-size: 40px;
+    color: #636363;
+    line-height:0.1}
 
 </style>
 </head>
 <body>
-<div class="document" id="extract-data-from-figures-using-inkscape">
-<h1 class="title">Extract data from figures using Inkscape</h1>
+<div class="document">
 
+
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="extract-data-from-figures-using-inkscape">
+<h1>Extract data from figures using Inkscape</h1>
 <div class="sidebar">
 <p class="first sidebar-title">title</p>
 <div class="cc last docutils container">
@@ -613,13 +631,16 @@ div.cc {
 </div>
 </div>
 <p><strong>Carlos Galdino</strong></p>
-<p>Last updated: 2020-06-28</p>
+<p>Last updated: 2020-06-29</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 <p>In this tutorial, we are going to extract data from figures in pdf’s using a vector graphics editor (<a class="reference external" href="https://inkscape.org/">Inkscape</a>), a text editor (<a class="reference external" href="https://atom.io/">Atom</a>), and a spreadsheet software (<a class="reference external" href="https://www.libreoffice.org/discover/calc/">LibreOffice Calc</a>). Note that, this method is not bound by this choice of applications and you may use your preferred ones.</p>
 <p>As an example, I have created this <a class="reference external" href="tutorial/article_example.pdf">dummy pdf article</a> which we will use trough out this tutorial. The example article has figures with graphs using either solid curves or scattered points. Also, half of the figures are in a <a class="reference external" href="https://en.wikipedia.org/wiki/Vector_graphics">vector</a> format and the other half are in a <a class="reference external" href="https://en.wikipedia.org/wiki/Raster_graphics">raster</a> format. Roughly speaking, the main difference between them is that raster graphics (.png, .jpg, ...) are made of pixels, while vector graphics (.svg, .eps, ...) are made of vector Cartesian points. In the figure below we can clearly see the difference between them. Note that, no matter how much you zoom in on the figure below, there is no blur in the vector part. This is what makes vector format perfect for high-quality publication figures or presentation on big screens. Raster images should be preferred mostly when the image is a photograph (sometimes heatmaps are also better presented using raster format).</p>
-<a class="reference external image-reference" href="raster_vector.svg"><object data="raster_vector.svg" style="width: 600px;" type="image/svg+xml">raster_vector.svg</object></a>
+<a class="reference external image-reference" href="raster_vector.svg"><object data="raster_vector.svg" style="width: 450px;" type="image/svg+xml">raster_vector.svg</object></a>
 <p>The figure above is a montage of figures 1 and 3 in the example pdf. Be aware that, we can only extract data from vector images, so there is this other tutorial that will show you <a class="reference external" href="../Tutorial_raster2vector/test.html">how to convert raster images (graphs) to a vector format</a>. Also, we need the figure to be formed by solid lines. If the curves are represented by scattered points, as in figures 2 and 4 in the example article, we have to transform them into solid lines in a vector format.</p>
 <div class="section" id="step-by-step-instructions">
-<h1>Step-by-step instructions</h1>
+<h2>Step-by-step instructions</h2>
 <ol class="arabic simple">
 <li>Download, install and open Inkscape.</li>
 <li>Click and drag the pdf file into Inkscape.</li>
@@ -629,20 +650,23 @@ div.cc {
 <li>Zoom in on figure 1, click over it couple of times until the figure is selected. Then, drag it elsewhere so you can select and delete the everything else.</li>
 </ol>
 <a class="reference external image-reference" href="2.gif"><img alt="2.gif" src="2.gif" /></a>
-<p>4. Check if the figure is a “clone”. You may check at the status bar down below
-after selecting the image. If the image is a clone, with the image selected, go to Edit &gt; Clone &gt; Unlink Clones recursively.</p>
+<p>4. Check if the figure is a &quot;clone&quot;. You may check at the status bar down below
+after selecting the image. If the image is a clone, with the image selected, go to <code>Edit &gt; Clone &gt; Unlink Clones recursively</code>.</p>
 <a class="reference external image-reference" href="3.gif"><img alt="3.gif" src="3.gif" /></a>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Sometimes, when importing figures from pdf’s, new objects may disappear outside of the “figure area”. I think that is a bug in which the “layers” of the svg file are not formatted properly. If this bothers you, a possible fix is to just add a new layer and ungroup the objects.</p>
-</div>
+<p>Sometimes, when importing figures from pdf’s, new objects may disappear outside of the “figure area”. I think that is a bug in which the “layers” of the svg file are not formatted properly. If this bothers you, a possible fix is to just add a new layer and ungroup the objects.</p>
 <a class="reference external image-reference" href="3b.gif"><img alt="3b.gif" src="3b.gif" /></a>
+<div class="last line-block">
+<div class="line"><br /></div>
+</div>
+</div>
 <ol class="arabic simple" start="5">
-<li>Use the nodes tool to select all nodes in the curve. Then, with all nodes selected, click in the button add nodes. This will add one extra node between two existing nodes. You may click the add nodes button more than once to increase the number of nodes (in this case twice is enough). Finally, transform all nodes to segment lines by clicking the button “Make selected segments lines”. Sometimes, I notice that to click this button only once do not work (maybe this is something of early versions of Inkscape,), so I like to make segments lines, then make selected nodes symmetric, then making them segments lines again.</li>
+<li>Use the nodes tool to select all nodes in the curve. Then, with all nodes selected, click in the button add nodes. This will add one extra node between two existing nodes. You may click the add nodes button more than once to increase the number of nodes (in this case twice is enough). Finally, transform all nodes to segment lines by clicking the button <code>Make selected segments lines</code>. Sometimes, I notice that to click this button only once do not work (maybe this is something of early versions of Inkscape,), so I like to make segments lines, then make selected nodes symmetric, then making them segments lines again.</li>
 </ol>
 <a class="reference external image-reference" href="4.gif"><img alt="4.gif" src="4.gif" /></a>
 <p>6. Check the name of the objected of interest. In this case, the red curve. Click on the curve (you may need to click more then once to select the curve,
-because there is a high change the different objects are grouped), then open the Objects dialog in Objects &gt; Objects. In this case, the name of the red curve is “path16271”.</p>
+because there is a high change the different objects are grouped), then open the Objects dialog in <code>Object &gt; Objects</code>. In this case, the name of the red curve is “path16271”.</p>
 <a class="reference external image-reference" href="5.gif"><img alt="5.gif" src="5.gif" /></a>
 <ol class="arabic simple" start="7">
 <li>Save the file. I saved as drawing.svg.</li>
@@ -655,27 +679,31 @@ because there is a high change the different objects are grouped), then open the
 </ol>
 <a class="reference external image-reference" href="7.gif"><img alt="7.gif" src="7.gif" /></a>
 <ol class="arabic simple" start="11">
-<li>Find and replace all <cite>spaces</cite> by <cite>\n</cite>, which is a digital representation of a new line. Make sure that “Use Regex” is enabled.</li>
+<li>Find and replace all <code>spaces</code> by <code>\n</code>, which is a digital representation of a new line. Make sure that <code>Use Regex</code> is enabled.</li>
 </ol>
 <a class="reference external image-reference" href="8.gif"><img alt="8.gif" src="8.gif" /></a>
-<ol class="arabic simple" start="11">
-<li>Erase the “m” in the first line and give it a quick check to see if it has a pair of number separated by a comma in all rows. These are (x, y) Cartesian coordinates that draw the curve on the screen. The “m” that we just erased was a instruction for how to interpret the following Cartesian points, that stands for “move”. This means that only absolute point is the first one and all of the subsequent points are relative to the previous point at the row above.</li>
-</ol>
+<ol class="arabic" start="12">
+<li><p class="first">Erase the “m” in the first line and give it a quick check to see if it has a pair of number separated by a comma in all rows. These are (x, y) Cartesian coordinates that draw the curve on the screen. The “m” that we just erased was a instruction for how to interpret the following Cartesian points, that stands for “move”. This means that only absolute point is the first one and all of the subsequent points are relative to the previous point at the row above.</p>
 <p>If the instruction is not “m”, we have to be careful about how to interpret the (x, y) coordinates. Other instructions like “l”, which stands for “line”, will also work as “m”. If the first letter is not “m” nor “l” or if you have multiple instructions along the file (letters in other rows other than the first one), go back and do item 5 again. If necessary, <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths">here</a> is a list of other instructions that svg files use to construct paths.</p>
-<a class="reference external image-reference" href="9.gif"><img alt="9.gif" src="9.gif" /></a>
-<ol class="arabic simple" start="12">
-<li>Save the file as data.txt.</li>
-<li>Now, before going any further, we need to go back to Inkscape and find the exact (x, y) coordinates of the <cite>first</cite> and the <cite>last</cite> data point. In this example, it is not clear what are the (x, y) values of the first data point, mostly because of the poor number of ticks in the y and x axes.</li>
+</li>
 </ol>
+<a class="reference external image-reference" href="9.gif"><img alt="9.gif" src="9.gif" /></a>
+<ol class="arabic" start="13">
+<li><p class="first">Save the file as data.txt.</p>
+</li>
+<li><p class="first">Now, before going any further, we need to go back to Inkscape and find the exact (x, y) coordinates of the <cite>first</cite> and the <cite>last</cite> data point. In this example, it is not clear what are the (x, y) values of the first data point, mostly because of the poor number of ticks in the y and x axes.</p>
 <p>There are many ways we can use to find the exact values the data points. Here, I am showing one possible way of how we can do it using <a class="reference external" href="https://en.wikipedia.org/wiki/Cross-multiplication">Cross-multiplication</a> and Inkscape. Firstly, use the Belzier tool to draw lines (hold ctrl to make straight lines and use double click to draw the line). If necessary, there are many of tutorials on the internet on how to use this tool. By paying attetion to the size of these lines we are able to transform between spacial coordinates to the “graph units”. Particularly, in this example (see below), we know that 11.964 mm is equivalent to 0.5, therefore, 18.246 is equivalent to 0.7625. This means that the y coordinate of the first data point is 0.7625.</p>
 <a class="reference external image-reference" href="10.gif"><img alt="10.gif" src="10.gif" /></a>
-<p>If we do the same for the x coordinate of the first data point (see below), we will see that 12.706 mm is equivalent to 5, therefore, 2.532 is equivalent to 0.9964. This means that the x coordinate of the first data point is
-0.9968.</p>
+<p>If we do the same for the x coordinate of the first data point (see below), we will see that 12.706 mm is equivalent to 5, therefore, 2.532 is equivalent to 0.9964. This means that the x coordinate of the first data point is 0.9968.</p>
 <a class="reference external image-reference" href="11.gif"><img alt="11.gif" src="11.gif" /></a>
 <p>Finally, if we do the same for the last data point, we will see that its coordinates are roughly (25, 0.0114).</p>
-<p>14. Open a spreadsheet software (in this case LibreOffice Calc). Click and drag
+</li>
+</ol>
+<p>15. Open a spreadsheet software (in this case LibreOffice Calc). Click and drag
 data.txt to the spreadsheet and import data using comma as a separator.</p>
+<blockquote>
 <a class="reference external image-reference" href="12.gif"><img alt="12.gif" src="12.gif" /></a>
+</blockquote>
 <p>16. It is useful to rearrange the spreadsheet to look something like the image below. Note that, we have the coordinates of the first and last data point
 that we found in item 13. Also, we have two values defined as Delta x and Delta y which are the difference between the value of the last and first data points for x and y, respectively. Cell B10 is just “=B6-B2”, while B11 is “=B7-B3”.</p>
 <a class="reference external image-reference" href="13.gif"><img alt="13.gif" src="13.gif" /></a>
@@ -705,6 +733,7 @@ coordinates (See below).</p>
 <p>If this was useful to you, send me an Email at <cite>galdino&#64;ifi.unicamp.br</cite>. Also, suggestions and criticism are welcomed.</p>
 <div class="line-block">
 <div class="line"><br /></div>
+</div>
 </div>
 </div>
 </div>

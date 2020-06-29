@@ -16,6 +16,10 @@ def rst2html(source_path, destination_path=None, css=None):
                                    destination_path = destination_path,
                                    writer_name ="html",
                                    settings_overrides = settings_overrides)
+    else:
+        docutils.core.publish_file(source_path      = source_path,
+                                   destination_path = destination_path,
+                                   writer_name ="html")
 
 if __name__ == '__main__':
 

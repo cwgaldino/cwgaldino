@@ -5,18 +5,22 @@
 Extract data from figures using Inkscape
 #########################################
 
-.. sidebar:: title
-
-    .. container:: cc
-
-        .. image:: https://i.creativecommons.org/l/by/4.0/88x31.png
-            :target: http://creativecommons.org/licenses/by/4.0/
-            :width: 80px
-
-        This work is licensed under a `Creative Commons Attribution 4.0 International License`_.
-
-.. _`Creative Commons Attribution 4.0 International License`: http://creativecommons.org/licenses/by/4.0/
-
+.. .. sidebar:: title
+..
+..     .. container:: cc
+..
+..         .. image:: https://i.creativecommons.org/l/by/4.0/88x31.png
+..             :target: http://creativecommons.org/licenses/by/4.0/
+..             :width: 80px
+..
+..         This work is licensed under a `Creative Commons Attribution 4.0 International License`_.
+..
+..         .. image:: https://i.creativecommons.org/l/by/4.0/88x31.png
+..             :target: http://creativecommons.org/licenses/by/4.0/
+..             :width: 80px
+..
+.. .. _`Creative Commons Attribution 4.0 International License`: http://creativecommons.org/licenses/by/4.0/
+..
 
 
 **Carlos Galdino**
@@ -25,7 +29,6 @@ Last updated: |date|
 
 .. |date| date::
 
-|
 
 In this tutorial, we are going to extract data from figures in pdf’s using a vector graphics editor (`Inkscape`_), a text editor (`Atom`_), and a spreadsheet software (`LibreOffice Calc`_). Note that, this method is not bound by this choice of applications and you may use your preferred ones.
 
@@ -190,5 +193,23 @@ coordinates (See below).
 ------------
 
 If this was useful to you, send me an Email at `galdino@ifi.unicamp.br`. Also, suggestions and criticism are welcomed.
+
+|
+
+
+
+
+
+.. container:: cc
+
+    .. image:: https://i.creativecommons.org/l/by/4.0/88x31.png
+        :target: http://creativecommons.org/licenses/by/4.0/
+        :width: 80px
+
+    This work is licensed under a `Creative Commons Attribution 4.0 International License`_.
+
+
+
+.. _`Creative Commons Attribution 4.0 International License`: http://creativecommons.org/licenses/by/4.0/
 
 |
