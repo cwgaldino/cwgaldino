@@ -598,12 +598,12 @@ div.cc {
     line-height:1}
 
 div.name {
-    font-family: Karumbi;
+    font-family: Karumbi2;
     font-size: 40px;
     color: #636363;
     line-height:0.1}
 
 @font-face {
-  font-family: Karumbi;
+  font-family: Karumbi2;
   src: url(Karumbi.ttf);
 }
