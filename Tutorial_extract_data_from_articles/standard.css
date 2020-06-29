@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.14: http://docutils.sourceforge.net/" />
+<title>Extract data from figures using Inkscape</title>
+<style type="text/css">
+
+/******************************************************************************
+The MIT License (MIT)
+Copyright (c) 2014 Matthias Eisen
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+******************************************************************************/
+
+
+body {
+    font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    font-size: 18px;
+    line-height:2;
+    color: #111;
+}
+
+div.document {
+    margin: 0 auto;
+    max-width: 720px;
+}
+
+
+/* ========== Headings ========== */
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    margin-top: 1.5em;
+    line-height:1.2;
+}
+
+h1.section-subtitle,
+h2.section-subtitle,
+h3.section-subtitle,
+h4.section-subtitle,
+h5.section-subtitle,
+h6.section-subtitle {
+    margin-top: 0.4em;
+}
+
+h1.title {
+    text-align: left;
+}
+
+h2.subtitle {
+    text-align: center;
+}
+
+span.section-subtitle {
+    font-size: 80%,
+}
+
+/* //-------- Headings ---------- */
+
+
+/* ========== Images ========== */
+
+img,
+.figure,
+object {
+    display:        block;
+    margin-left:    auto;
+    margin-right:   auto;
+    width: 650px;
+}
+
+div.figure {
+    margin-left:    2em;
+    margin-right:   2em;
+}
+
+img.align-left, .figure.align-left, object.align-left {
+    clear:          left;
+    float:          left;
+    margin-right:   1em;
+}
+
+img.align-right, .figure.align-right, object.align-right {
+    clear:          right;
+    float:          right;
+    margin-left:    1em;
+}
+
+img.align-center, .figure.align-center, object.align-center {
+    display:        block;
+    margin-left:    auto;
+    margin-right:   auto;
+}
+
+/* reset inner alignment in figures */
+div.align-right {
+    text-align: inherit;
+}
+
+object[type="image/svg+xml"],
+object[type="application/x-shockwave-flash"] {
+    overflow: hidden;
+}
+
+/* //-------- Images ---------- */
+
+
+
+/* ========== Literal Blocks ========== */
+
+pre, tt.literal {
+    font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
+    font-size: 14px;
+}
+
+tt.literal {
+    background-color: #ffa;
+}
+
+pre.address {
+    margin-bottom: 0;
+    margin-top: 0;
+    font: inherit;
+}
+
+pre.literal-block {
+    border-left: solid 5px #ccc;
+    padding: 1em;
+}
+
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+}
+
+span.interpreted {
+}
+
+span.pre {
+    white-space: pre;
+}
+
+pre.code .ln {
+    color: grey;
+}
+pre.code, code {
+    border-style: none;
+    padding: 1em 0;
+}
+pre.code .comment, code .comment {
+    color: #888;
+}
+pre.code .keyword, code .keyword {
+    font-weight: bold;
+    color: #080;
+}
+pre.code .literal.string, code .literal.string {
+    color: #d20;
+    background-color: #fff0f0;
+}
+pre.code .literal.number, code .literal.number {
+    color: #00d;
+}
+pre.code .name.builtin, code .name.builtin {
+    color: #038;
+    color: #820;
+}
+pre.code .name.namespace, code .name.namespace {
+    color: #b06;
+}
+pre.code .deleted, code .deleted {
+    background-color: #fdd;
+}
+pre.code .inserted, code .inserted {
+    background-color: #dfd;
+}
+
+
+/* //-------- Literal Blocks --------- */
+
+
+/* ========== Tables ========== */
+
+table {
+    border-spacing:         0;
+    border-collapse:        collapse;
+    border-style:           none;
+    border-top:             solid 1px #111;
+    border-bottom:          solid 1px #111;
+}
+
+td,
+th {
+    border: none;
+    padding:                0.5em;
+    vertical-align:         top;
+}
+
+th {
+    border-top:             solid 1px #111;
+    border-bottom:          solid 1px #111;
+    background-color:       #ddd;
+}
+
+
+table.field-list,
+table.footnote,
+table.citation,
+table.option-list {
+    border:                 none;
+}
+table.docinfo {
+    margin:                 2em 4em;
+}
+
+table.docutils {
+    margin:                 1em 0;
+}
+
+table.docutils th.field-name,
+table.docinfo th.docinfo-name {
+    border:                 none;
+    background:             none;
+    font-weight:            bold ;
+    text-align:             left ;
+    white-space:            nowrap ;
+    padding-left:           0;
+    vertical-align:         middle;
+}
+
+table.docutils.booktabs {
+    border:                 none;
+    border-top:             2px solid;
+    border-bottom:          2px solid;
+    border-collapse:        collapse;
+}
+
+table.docutils.booktabs * {
+    border:                 0px;
+}
+table.docutils.booktabs th {
+    border-bottom:          thin solid;
+    text-align:             left;
+}
+
+span.option {
+    white-space: nowrap;
+}
+
+table caption {
+    margin-bottom: 2px;
+}
+
+/* //-------- Tables ---------- */
+
+
+/* ========== Lists ========== */
+
+ol.simple, ul.simple {
+    margin-bottom: 1em;
+}
+
+ol.arabic {
+    list-style: decimal;
+}
+
+ol.loweralpha {
+    list-style: lower-alpha;
+}
+
+ol.upperalpha {
+    list-style: upper-alpha;
+}
+
+ol.lowerroman {
+    list-style: lower-roman;
+}
+
+ol.upperroman {
+    list-style: upper-roman;
+}
+
+dl.docutils dd {
+    margin-bottom: 0.5em;
+}
+
+
+dl.docutils dt {
+    font-weight: bold;
+}
+
+/* //-------- Lists ---------- */
+
+
+/* ========== Sidebar ========== */
+
+div.sidebar {
+    margin: 0 0 0.5em 1em ;
+    border-left: solid 2px #111;
+    padding: 1em ;
+    width: 40% ;
+    float: right ;
+    clear: right;
+}
+
+div.sidebar {
+    font-size: 14px;
+}
+
+p.sidebar-title {
+    font-size: 0px;
+    font-weight: bold ;
+}
+
+p.sidebar-subtitle {
+    font-weight: bold;
+}
+
+/* //-------- Sidebar ---------- */
+
+
+/* ========== Topic ========== */
+
+div.topic {
+    margin: 2em;
+    padding: 1em 0;
+    border-width: 1px;
+    border-color: #111;
+    border-style: solid none;
+}
+
+div.topic p {
+    padding: 0;
+}
+
+p.topic-title {
+    font-weight: bold;
+}
+
+/* //-------- Topic ---------- */
+
+
+/* ========== Header ========== */
+
+div.header {
+    font-family:        "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    font-size:          14px;
+    margin:             2em auto 4em auto;
+    max-width:          960px;
+    clear:              both;
+}
+
+hr.header {
+    border:             0;
+    height:             1px;
+    margin-top:         1em;
+    background-color:   #111;
+}
+
+/* //-------- Header ---------- */
+
+
+/* ========== Footer ========== */
+
+div.footer {
+    font-family:        "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    font-size:          14px;
+    margin:             6em auto 2em auto;
+    max-width:          960px;
+    clear:              both;
+    text-align:         center;
+}
+
+hr.footer {
+    border:             0;
+    height:             1px;
+    margin-bottom:      2em;
+    background-color:   #111;
+}
+
+/* //-------- Footer ---------- */
+
+
+/* ========== Admonitions ========== */
+
+div.admonition,
+div.attention,
+div.caution,
+div.danger,
+div.error,
+div.hint,
+div.important,
+div.note,
+div.tip,
+div.warning {
+    margin: 2em;
+    border: solid 1px #111;
+    padding: 0 1em;
+    background-color: #eee;
+    line-height:1.2;
+}
+
+div.error,
+div.danger {
+    border-color: #a94442;
+    background-color: #f2dede;
+}
+
+div.hint,
+div.tip {
+    border-color: #31708f;
+    background-color: #d9edf7;
+}
+
+div.attention,
+div.caution,
+div.warning {
+    border-color: #8a6d3b;
+    background-color: #fcf8e3;
+}
+
+div.hint p.admonition-title,
+div.tip p.admonition-title {
+    color: #31708f;
+    font-weight: bold ;
+}
+
+div.note p.admonition-title,
+div.admonition p.admonition-title,
+div.important p.admonition-title {
+    font-weight: bold ;
+}
+
+div.attention p.admonition-title,
+div.caution p.admonition-title,
+div.warning p.admonition-title {
+    color: #8a6d3b;
+    font-weight: bold ;
+}
+
+div.danger p.admonition-title,
+div.error p.admonition-title,
+.code .error {
+    color: #a94442;
+    font-weight: bold ;
+}
+
+/* //-------- Admonitions ---------- */
+
+
+/* ========== Table of Contents ========== */
+
+div.contents {
+    margin: 2em 0;
+    border: none;
+}
+
+ul.auto-toc {
+    list-style-type: none;
+}
+
+a.toc-backref {
+    text-decoration: none ;
+    color: #111;
+}
+
+/* //-------- Table of Contents ---------- */
+
+
+
+/* ========== Line Blocks========== */
+
+div.line-block {
+    display: block ;
+    margin-top: 1em ;
+    margin-bottom: 1em;
+}
+
+div.line-block div.line-block {
+    margin-top: 0 ;
+    margin-bottom: 0 ;
+    margin-left: 1.5em;
+}
+
+/* //-------- Line Blocks---------- */
+
+
+/* ========== System Messages ========== */
+
+div.system-messages {
+    margin: 5em;
+}
+
+div.system-messages h1 {
+    color: red;
+}
+
+div.system-message {
+    border: medium outset ;
+    padding: 1em;
+}
+
+div.system-message p.system-message-title {
+    color: red ;
+    font-weight: bold;
+}
+
+/* //-------- System Messages---------- */
+
+
+/* ========== Helpers ========== */
+
+.hidden {
+    display: none;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-center {
+    clear: both ;
+    text-align: center;
+}
+
+.align-right {
+    text-align: right;
+}
+
+/* //-------- Helpers---------- */
+
+
+p.caption {
+    font-style: italic;
+    text-align: center;
+}
+
+p.credits {
+font-style: italic ;
+font-size: smaller }
+
+p.label {
+white-space: nowrap }
+
+p.rubric {
+font-weight: bold ;
+font-size: larger ;
+color: maroon ;
+text-align: center }
+
+p.attribution {
+text-align: right ;
+margin-left: 50% }
+
+blockquote.epigraph {
+    margin: 2em 5em;
+}
+
+div.abstract {
+margin: 2em 5em }
+
+div.abstract {
+font-weight: bold ;
+text-align: center }
+
+div.dedication {
+margin: 2em 5em ;
+text-align: center ;
+font-style: italic }
+
+div.dedication {
+font-weight: bold ;
+font-style: normal }
+
+
+span.classifier {
+font-style: oblique }
+
+span.classifier-delimiter {
+font-weight: bold }
+
+span.problematic {
+color: red }
+
+div.cc {
+    font-size: 10px;
+    line-height:1}
+
+</style>
+</head>
+<body>
+<div class="document" id="extract-data-from-figures-using-inkscape">
+<h1 class="title">Extract data from figures using Inkscape</h1>
+
+<div class="sidebar">
+<p class="first sidebar-title">title</p>
+<div class="cc last docutils container">
+<a class="reference external image-reference" href="http://creativecommons.org/licenses/by/4.0/"><img alt="https://i.creativecommons.org/l/by/4.0/88x31.png" src="https://i.creativecommons.org/l/by/4.0/88x31.png" style="width: 80px;" /></a>
+<p>This work is licensed under a <a class="reference external" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</div>
+</div>
+<p><strong>Carlos Galdino</strong></p>
+<p>Last updated: 2020-06-29</p>
+<p>In this tutorial, we are going to extract data from figures in pdf’s using a vector graphics editor (<a class="reference external" href="https://inkscape.org/">Inkscape</a>), a text editor (<a class="reference external" href="https://atom.io/">Atom</a>), and a spreadsheet software (<a class="reference external" href="https://www.libreoffice.org/discover/calc/">LibreOffice Calc</a>). Note that, this method is not bound by this choice of applications and you may use your preferred ones.</p>
+<p>As an example, I have created this <a class="reference external" href="tutorial/article_example.pdf">dummy pdf article</a> which we will use trough out this tutorial. The example article has figures with graphs using either solid curves or scattered points. Also, half of the figures are in a <a class="reference external" href="https://en.wikipedia.org/wiki/Vector_graphics">vector</a> format and the other half are in a <a class="reference external" href="https://en.wikipedia.org/wiki/Raster_graphics">raster</a> format. Roughly speaking, the main difference between them is that raster graphics (.png, .jpg, ...) are made of pixels, while vector graphics (.svg, .eps, ...) are made of vector Cartesian points. In the figure below we can clearly see the difference between them. Note that, no matter how much you zoom in on the figure below, there is no blur in the vector part. This is what makes vector format perfect for high-quality publication figures or presentation on big screens. Raster images should be preferred mostly when the image is a photograph (sometimes heatmaps are also better presented using raster format).</p>
+<a class="reference external image-reference" href="raster_vector.svg"><object data="raster_vector.svg" style="width: 600px;" type="image/svg+xml">raster_vector.svg</object></a>
+<p>The figure above is a montage of figures 1 and 3 in the example pdf. Be aware that, we can only extract data from vector images, so there is this other tutorial that will show you <a class="reference external" href="../Tutorial_raster2vector/test.html">how to convert raster images (graphs) to a vector format</a>. Also, we need the figure to be formed by solid lines. If the curves are represented by scattered points, as in figures 2 and 4 in the example article, we have to transform them into solid lines in a vector format.</p>
+<div class="section" id="step-by-step-instructions">
+<h1>Step-by-step instructions</h1>
+<ol class="arabic simple">
+<li>Download, install and open Inkscape.</li>
+<li>Click and drag the pdf file into Inkscape.</li>
+</ol>
+<a class="reference external image-reference" href="1.gif"><img alt="1.gif" src="1.gif" /></a>
+<ol class="arabic simple" start="3">
+<li>Zoom in on figure 1, click over it couple of times until the figure is selected. Then, drag it elsewhere so you can select and delete the everything else.</li>
+</ol>
+<a class="reference external image-reference" href="2.gif"><img alt="2.gif" src="2.gif" /></a>
+<p>4. Check if the figure is a “clone”. You may check at the status bar down below
+after selecting the image. If the image is a clone, with the image selected, go to Edit &gt; Clone &gt; Unlink Clones recursively.</p>
+<a class="reference external image-reference" href="3.gif"><img alt="3.gif" src="3.gif" /></a>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Sometimes, when importing figures from pdf’s, new objects may disappear outside of the “figure area”. I think that is a bug in which the “layers” of the svg file are not formatted properly. If this bothers you, a possible fix is to just add a new layer and ungroup the objects.</p>
+</div>
+<a class="reference external image-reference" href="3b.gif"><img alt="3b.gif" src="3b.gif" /></a>
+<ol class="arabic simple" start="5">
+<li>Use the nodes tool to select all nodes in the curve. Then, with all nodes selected, click in the button add nodes. This will add one extra node between two existing nodes. You may click the add nodes button more than once to increase the number of nodes (in this case twice is enough). Finally, transform all nodes to segment lines by clicking the button “Make selected segments lines”. Sometimes, I notice that to click this button only once do not work (maybe this is something of early versions of Inkscape,), so I like to make segments lines, then make selected nodes symmetric, then making them segments lines again.</li>
+</ol>
+<a class="reference external image-reference" href="4.gif"><img alt="4.gif" src="4.gif" /></a>
+<p>6. Check the name of the objected of interest. In this case, the red curve. Click on the curve (you may need to click more then once to select the curve,
+because there is a high change the different objects are grouped), then open the Objects dialog in Objects &gt; Objects. In this case, the name of the red curve is “path16271”.</p>
+<a class="reference external image-reference" href="5.gif"><img alt="5.gif" src="5.gif" /></a>
+<ol class="arabic simple" start="7">
+<li>Save the file. I saved as drawing.svg.</li>
+<li>Download, Install, and open Atom. Or you may use any other text editor as long as it has the ability to find and replace text.</li>
+<li>Open Drawing.svg in Atom. We may do that by clicking and draging the .svg file to Atom.</li>
+</ol>
+<a class="reference external image-reference" href="6.gif"><img alt="6.gif" src="6.gif" /></a>
+<ol class="arabic simple" start="10">
+<li>Find “path1627” in the file (ctrl+f). The object has many attributes, like id, transform, etc… The one we are interested is “d”. This tells us all of the Cartesian points that form the curve. Copy all of the text after “d=” and paste in another file. The shortcut for a new file in Atom is ctrl+n.</li>
+</ol>
+<a class="reference external image-reference" href="7.gif"><img alt="7.gif" src="7.gif" /></a>
+<ol class="arabic simple" start="11">
+<li>Find and replace all <cite>spaces</cite> by <cite>\n</cite>, which is a digital representation of a new line. Make sure that “Use Regex” is enabled.</li>
+</ol>
+<a class="reference external image-reference" href="8.gif"><img alt="8.gif" src="8.gif" /></a>
+<ol class="arabic simple" start="11">
+<li>Erase the “m” in the first line and give it a quick check to see if it has a pair of number separated by a comma in all rows. These are (x, y) Cartesian coordinates that draw the curve on the screen. The “m” that we just erased was a instruction for how to interpret the following Cartesian points, that stands for “move”. This means that only absolute point is the first one and all of the subsequent points are relative to the previous point at the row above.</li>
+</ol>
+<p>If the instruction is not “m”, we have to be careful about how to interpret the (x, y) coordinates. Other instructions like “l”, which stands for “line”, will also work as “m”. If the first letter is not “m” nor “l” or if you have multiple instructions along the file (letters in other rows other than the first one), go back and do item 5 again. If necessary, <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths">here</a> is a list of other instructions that svg files use to construct paths.</p>
+<a class="reference external image-reference" href="9.gif"><img alt="9.gif" src="9.gif" /></a>
+<ol class="arabic simple" start="12">
+<li>Save the file as data.txt.</li>
+<li>Now, before going any further, we need to go back to Inkscape and find the exact (x, y) coordinates of the <cite>first</cite> and the <cite>last</cite> data point. In this example, it is not clear what are the (x, y) values of the first data point, mostly because of the poor number of ticks in the y and x axes.</li>
+</ol>
+<p>There are many ways we can use to find the exact values the data points. Here, I am showing one possible way of how we can do it using <a class="reference external" href="https://en.wikipedia.org/wiki/Cross-multiplication">Cross-multiplication</a> and Inkscape. Firstly, use the Belzier tool to draw lines (hold ctrl to make straight lines and use double click to draw the line). If necessary, there are many of tutorials on the internet on how to use this tool. By paying attetion to the size of these lines we are able to transform between spacial coordinates to the “graph units”. Particularly, in this example (see below), we know that 11.964 mm is equivalent to 0.5, therefore, 18.246 is equivalent to 0.7625. This means that the y coordinate of the first data point is 0.7625.</p>
+<a class="reference external image-reference" href="10.gif"><img alt="10.gif" src="10.gif" /></a>
+<p>If we do the same for the x coordinate of the first data point (see below), we will see that 12.706 mm is equivalent to 5, therefore, 2.532 is equivalent to 0.9964. This means that the x coordinate of the first data point is
+0.9968.</p>
+<a class="reference external image-reference" href="11.gif"><img alt="11.gif" src="11.gif" /></a>
+<p>Finally, if we do the same for the last data point, we will see that its coordinates are roughly (25, 0.0114).</p>
+<p>14. Open a spreadsheet software (in this case LibreOffice Calc). Click and drag
+data.txt to the spreadsheet and import data using comma as a separator.</p>
+<a class="reference external image-reference" href="12.gif"><img alt="12.gif" src="12.gif" /></a>
+<p>16. It is useful to rearrange the spreadsheet to look something like the image below. Note that, we have the coordinates of the first and last data point
+that we found in item 13. Also, we have two values defined as Delta x and Delta y which are the difference between the value of the last and first data points for x and y, respectively. Cell B10 is just “=B6-B2”, while B11 is “=B7-B3”.</p>
+<a class="reference external image-reference" href="13.gif"><img alt="13.gif" src="13.gif" /></a>
+<p>17. Cells D2 and E2 are the only ones that have data points with absolute values. The following rows have relative coordinates. We can make all data points absolute by making the first data point (0, 0) in columns F and G and
+use the appropriate formula in the following rows (see below).</p>
+<a class="reference external image-reference" href="14.gif"><img alt="14.gif" src="14.gif" /></a>
+<ol class="arabic simple" start="18">
+<li>The data points of columns F and G are in “drawing units” (cm, mm, in, …). By subtracting the value of the last and first data points in these columns we can fill out cells B14 and B15.</li>
+</ol>
+<a class="reference external image-reference" href="15.gif"><img alt="15.gif" src="15.gif" /></a>
+<ol class="arabic simple" start="19">
+<li>We must then define the calibration factor that will help us go from “drawing units” to “real units”. The calibration factor for the x coordinate is given by “=B10/B14” while the one for y is “=B11/B15”.</li>
+</ol>
+<a class="reference external image-reference" href="16.gif"><img alt="16.gif" src="16.gif" /></a>
+<p>20. The final data points can be found by multiplying each data point by the calibration factor and adding the value of the first data point for the x and y
+coordinates (See below).</p>
+<a class="reference external image-reference" href="17.gif"><img alt="17.gif" src="17.gif" /></a>
+<ol class="arabic simple" start="21">
+<li>Done! Columns H and I are the x and y values of the data points. The figure below shows a plot of these columns. Finally, we can export these columns to a text file and use it elsewhere.</li>
+</ol>
+<a class="reference external image-reference" href="18.gif"><img alt="18.gif" src="18.gif" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><a class="reference internal" href="#extract-data-from-figures-using-inkscape">Go to top</a>.</p>
+<hr class="docutils" />
+<p>If this was useful to you, send me an Email at <cite>galdino&#64;ifi.unicamp.br</cite>. Also, suggestions and criticism are welcomed.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+</body>
+</html>
