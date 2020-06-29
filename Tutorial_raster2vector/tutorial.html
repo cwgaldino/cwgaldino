@@ -29,10 +29,11 @@ THE SOFTWARE.
 
 
 body {
-    font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    /* font-family: "STIXGeneral-Regular"; */
+    font-family: "cmr10";
     font-size: 18px;
-    line-height:2;
-    color: #111;
+    line-height:2.2;
+    color: #444;
 }
 
 div.document {
@@ -48,6 +49,10 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 1.5em;
     line-height:1.2;
 }
+
+h1 {
+    font-weight: bold;
+    font-family: Roboto}
 
 h1.section-subtitle,
 h2.section-subtitle,
@@ -81,7 +86,7 @@ object {
     display:        block;
     margin-left:    auto;
     margin-right:   auto;
-    width: 650px;
+    width: 600px;
 }
 
 div.figure {
@@ -595,9 +600,27 @@ font-weight: bold }
 span.problematic {
 color: red }
 
+/* galdino */
 div.cc {
-    font-size: 10px;
+    font-size: 18px;
+    /* font-size: 10px; */
     line-height:1}
+
+div.name {
+    font-family: Karumbi2;
+    font-size: 40px;
+    color: #636363;
+    line-height:0.1}
+
+@font-face {
+  font-family: Karumbi2;
+  src: url("../styles/fonts/Karumbi.ttf");
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("../styles/fonts/Roboto-Regular.ttf");
+}
 
 </style>
 </head>
@@ -610,13 +633,6 @@ div.cc {
 </div>
 <div class="section" id="how-to-vectorize-raster-figures-from-scientific-journals">
 <h1>How to <em>vectorize</em> raster figures from scientific journals</h1>
-<div class="sidebar">
-<p class="first sidebar-title">title</p>
-<div class="cc last docutils container">
-<a class="reference external image-reference" href="http://creativecommons.org/licenses/by/4.0/"><img alt="https://i.creativecommons.org/l/by/4.0/88x31.png" src="https://i.creativecommons.org/l/by/4.0/88x31.png" style="width: 80px;" /></a>
-<p>This work is licensed under a <a class="reference external" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
-</div>
-</div>
 <p><strong>Carlos Galdino</strong></p>
 <p>Last updated: 2020-06-29</p>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Vector_graphics">Vector images</a> are great for high-quality publication figures or presentations on big screens. In opposition, <a class="reference external" href="https://en.wikipedia.org/wiki/Raster_graphics">raster graphics</a> are great for pixelated images, like photographs. Sometimes, it is useful to convert an image from a raster format (.png, .jpg, ...) to a vector format (.svg, .pdf, ...). There are many ways to do that and I'm gonna show you one simple way to that which works well for images with well defined lines and curves, e. g., graphs.</p>
@@ -681,9 +697,13 @@ div.cc {
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
+<p>If this was useful to you, send me an Email at <cite>galdino&#64;ifi.unicamp.br</cite>. Also, suggestions and criticism are welcomed.</p>
 <p><a class="reference internal" href="#how-to-vectorize-raster-figures-from-scientific-journals">Go to top</a>.</p>
 <hr class="docutils" />
-<p>If this was useful to you, send me an Email at <cite>galdino&#64;ifi.unicamp.br</cite>. Also, suggestions and criticism are welcomed.</p>
+<div class="cc docutils container">
+<a class="reference external image-reference" href="http://creativecommons.org/licenses/by/4.0/"><img alt="https://i.creativecommons.org/l/by/4.0/88x31.png" src="https://i.creativecommons.org/l/by/4.0/88x31.png" style="width: 80px;" /></a>
+<p>This work is licensed under a <a class="reference external" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>

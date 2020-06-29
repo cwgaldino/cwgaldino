@@ -5,17 +5,6 @@
 How to *vectorize* raster figures from scientific journals
 ###########################################################
 
-.. sidebar:: title
-
-    .. container:: cc
-
-        .. image:: https://i.creativecommons.org/l/by/4.0/88x31.png
-            :target: http://creativecommons.org/licenses/by/4.0/
-            :width: 80px
-
-        This work is licensed under a `Creative Commons Attribution 4.0 International License`_.
-
-.. _`Creative Commons Attribution 4.0 International License`: http://creativecommons.org/licenses/by/4.0/
 
 **Carlos Galdino**
 
@@ -109,15 +98,28 @@ The final result will look something like this:
 
 |
 
+If this was useful to you, send me an Email at `galdino@ifi.unicamp.br`. Also, suggestions and criticism are welcomed.
 
 `Go to top`_.
 
 .. _`Go to top`: `How to vectorize raster figures from scientific journals`_
 
 
+
 ------------
 
-If this was useful to you, send me an Email at `galdino@ifi.unicamp.br`. Also, suggestions and criticism are welcomed.
 
+
+.. container:: cc
+
+    .. image:: https://i.creativecommons.org/l/by/4.0/88x31.png
+        :target: http://creativecommons.org/licenses/by/4.0/
+        :width: 80px
+
+    This work is licensed under a `Creative Commons Attribution 4.0 International License`_.
+
+
+
+.. _`Creative Commons Attribution 4.0 International License`: http://creativecommons.org/licenses/by/4.0/
 
 |

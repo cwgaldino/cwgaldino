@@ -185,20 +185,15 @@ coordinates (See below).
 
 |
 
+If this was useful to you, send me an Email at `galdino@ifi.unicamp.br`. Also, suggestions and criticism are welcomed.
 
 `Go to top`_.
 
 .. _`Go to top`: `Extract data from figures using Inkscape`_
 
 
-------------
-
-If this was useful to you, send me an Email at `galdino@ifi.unicamp.br`. Also, suggestions and criticism are welcomed.
-
-
 
 ------------
-
 
 
 
