@@ -195,8 +195,9 @@ coordinates (See below).
 
 If this was useful to you, send me an Email at `galdino@ifi.unicamp.br`. Also, suggestions and criticism are welcomed.
 
-|
 
+
+------------
 
 
 
