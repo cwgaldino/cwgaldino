@@ -5,7 +5,11 @@
 How to *vectorize* raster figures from scientific journals
 ###########################################################
 
-.. sidebar:: title
+**Carlos Galdino**
+
+Last updated: |date|
+
+.. |date| date::
 
     .. container:: cc
 
@@ -16,13 +20,6 @@ How to *vectorize* raster figures from scientific journals
         This work is licensed under a `Creative Commons Attribution 4.0 International License`_.
 
 .. _`Creative Commons Attribution 4.0 International License`: http://creativecommons.org/licenses/by/4.0/
-
-**Carlos Galdino**
-
-Last updated: |date|
-
-.. |date| date::
-
 
 `Vector images`_ are great for high-quality publication figures or presentations on big screens. In opposition, `raster graphics`_ are great for pixelated images, like photographs. Sometimes, it is useful to convert an image from a raster format (.png, .jpg, ...) to a vector format (.svg, .pdf, ...). There are many ways to do that and I'm gonna show you one simple way to that which works well for images with well defined lines and curves, e. g., graphs.
 
@@ -113,11 +110,3 @@ The final result will look something like this:
 `Go to top`_.
 
 .. _`Go to top`: `How to vectorize raster figures from scientific journals`_
-
-
-------------
-
-If this was useful to you, send me an Email at `galdino@ifi.unicamp.br`. Also, suggestions and criticism are welcomed.
-
-
-|
