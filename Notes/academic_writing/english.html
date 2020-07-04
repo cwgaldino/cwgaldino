@@ -1,0 +1,1534 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.14: http://docutils.sourceforge.net/" />
+<title>Academic writing</title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7952 2016-07-26 18:15:59Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+.subscript {
+  vertical-align: sub;
+  font-size: smaller }
+
+.superscript {
+  vertical-align: super;
+  font-size: smaller }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title, .code .error {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left, table.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right, table.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table.align-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+.align-top    {
+  vertical-align: top }
+
+.align-middle {
+  vertical-align: middle }
+
+.align-bottom {
+  vertical-align: bottom }
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+pre.code .ln { color: grey; } /* line numbers */
+pre.code, code { background-color: #eeeeee }
+pre.code .comment, code .comment { color: #5C6576 }
+pre.code .keyword, code .keyword { color: #3B0D06; font-weight: bold }
+pre.code .literal.string, code .literal.string { color: #0C5404 }
+pre.code .name.builtin, code .name.builtin { color: #352B84 }
+pre.code .deleted, code .deleted { background-color: #DEB0A1}
+pre.code .inserted, code .inserted { background-color: #A3D289}
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+/* "booktabs" style (no vertical lines) */
+table.docutils.booktabs {
+  border: 0px;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-collapse: collapse;
+}
+table.docutils.booktabs * {
+  border: 0px;
+}
+table.docutils.booktabs th {
+  border-bottom: thin solid;
+  text-align: left;
+}
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+<style type="text/css">
+
+/*
+*   math2html: convert LaTeX equations to HTML output.
+*
+*   Copyright (C) 2009,2010 Alex Fernández
+*
+*   Released under the terms of the `2-Clause BSD license'_, in short:
+*   Copying and distribution of this file, with or without modification,
+*   are permitted in any medium without royalty provided the copyright
+*   notice and this notice are preserved.
+*   This file is offered as-is, without any warranty.
+*
+* .. _2-Clause BSD license: http://www.spdx.org/licenses/BSD-2-Clause
+*
+*   Based on eLyXer: convert LyX source files to HTML output.
+*   http://elyxer.nongnu.org/
+*/
+/* --end--
+* CSS file for LaTeX formulas.
+*/
+
+/* Formulas */
+.formula {
+	text-align: center;
+	font-family: "Droid Serif", "DejaVu Serif", "STIX", serif;
+	margin: 1.2em 0;
+}
+span.formula {
+	white-space: nowrap;
+}
+div.formula {
+	padding: 0.5ex;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Basic features */
+a.eqnumber {
+	display: inline-block;
+	float: right;
+	clear: right;
+	font-weight: bold;
+}
+span.unknown {
+	color: #800000;
+}
+span.ignored, span.arraydef {
+	display: none;
+}
+.formula i {
+	letter-spacing: 0.1ex;
+}
+
+/* Alignment */
+.align-left, .align-l {
+	text-align: left;
+}
+.align-right, .align-r {
+	text-align: right;
+}
+.align-center, .align-c {
+	text-align: center;
+}
+
+/* Structures */
+span.overline, span.bar {
+	text-decoration: overline;
+}
+.fraction, .fullfraction {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+}
+.fraction .fraction {
+	font-size: 80%;
+	line-height: 100%;
+}
+span.numerator {
+	display: block;
+}
+span.denominator {
+	display: block;
+	padding: 0ex;
+	border-top: thin solid;
+}
+sup.numerator, sup.unit {
+	font-size: 70%;
+	vertical-align: 80%;
+}
+sub.denominator, sub.unit {
+	font-size: 70%;
+	vertical-align: -20%;
+}
+span.sqrt {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0.1ex;
+}
+sup.root {
+	font-size: 70%;
+	position: relative;
+	left: 1.4ex;
+}
+span.radical {
+	display: inline-block;
+	padding: 0ex;
+	font-size: 150%;
+	vertical-align: top;
+}
+span.root {
+	display: inline-block;
+	border-top: thin solid;
+	padding: 0ex;
+	vertical-align: middle;
+}
+span.symbol {
+	line-height: 125%;
+	font-size: 125%;
+}
+span.bigsymbol {
+	line-height: 150%;
+	font-size: 150%;
+}
+span.largesymbol {
+	font-size: 175%;
+}
+span.hugesymbol {
+	font-size: 200%;
+}
+span.scripts {
+	display: inline-table;
+	vertical-align: middle;
+}
+.script {
+	display: table-row;
+	text-align: left;
+	line-height: 150%;
+}
+span.limits {
+	display: inline-table;
+	vertical-align: middle;
+}
+.limit {
+	display: table-row;
+	line-height: 99%;
+}
+sup.limit, sub.limit {
+	line-height: 100%;
+}
+span.symbolover {
+	display: inline-block;
+	text-align: center;
+	position: relative;
+	float: right;
+	right: 100%;
+	bottom: 0.5em;
+	width: 0px;
+}
+span.withsymbol {
+	display: inline-block;
+}
+span.symbolunder {
+	display: inline-block;
+	text-align: center;
+	position: relative;
+	float: right;
+	right: 80%;
+	top: 0.3em;
+	width: 0px;
+}
+
+/* Environments */
+span.array, span.bracketcases, span.binomial, span.environment {
+	display: inline-table;
+	text-align: center;
+	border-collapse: collapse;
+	margin: 0em;
+	vertical-align: middle;
+}
+span.arrayrow, span.binomrow {
+	display: table-row;
+	padding: 0ex;
+	border: 0ex;
+}
+span.arraycell, span.bracket, span.case, span.binomcell, span.environmentcell {
+	display: table-cell;
+	padding: 0ex 0.2ex;
+	line-height: 99%;
+	border: 0ex;
+}
+/*
+* CSS file for LaTeX formulas, extra stuff:
+* binomials, vertical braces, stackrel, fonts and colors.
+*/
+
+/* Inline binomials */
+span.binom {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 80%;
+}
+span.binomstack {
+	display: block;
+	padding: 0em;
+}
+
+/* Over- and underbraces */
+span.overbrace {
+	border-top: 2pt solid;
+}
+span.underbrace {
+	border-bottom: 2pt solid;
+}
+
+/* Stackrel */
+span.stackrel {
+	display: inline-block;
+	text-align: center;
+}
+span.upstackrel {
+	display: block;
+	padding: 0em;
+	font-size: 80%;
+	line-height: 64%;
+	position: relative;
+	top: 0.15em;
+
+}
+span.downstackrel {
+	display: block;
+	vertical-align: bottom;
+	padding: 0em;
+}
+
+/* Fonts */
+span.mathsf, span.textsf {
+	font-style: normal;
+	font-family: sans-serif;
+}
+span.mathrm, span.textrm {
+	font-style: normal;
+	font-family: serif;
+}
+span.text, span.textnormal {
+	font-style: normal;
+}
+span.textipa {
+	color: #008080;
+}
+span.fraktur {
+	font-family: "Lucida Blackletter", eufm10, blackletter;
+}
+span.blackboard {
+	font-family: Blackboard, msbm10, serif;
+}
+span.scriptfont {
+	font-family: "Monotype Corsiva", "Apple Chancery", "URW Chancery L", cursive;
+	font-style: italic;
+}
+
+/* Colors */
+span.colorbox {
+	display: inline-block;
+	padding: 5px;
+}
+span.fbox {
+	display: inline-block;
+	border: thin solid black;
+	padding: 2px;
+}
+span.boxed, span.framebox {
+	display: inline-block;
+	border: thin solid black;
+	padding: 5px;
+}
+
+
+</style>
+</head>
+<body>
+<div class="document" id="academic-writing">
+<h1 class="title">Academic writing</h1>
+
+<div class="section" id="general-tips">
+<h1>General tips</h1>
+<ul>
+<li><p class="first">Do not describe what you have done, but tell a story.</p>
+</li>
+<li><p class="first">Care about the reader. Do the work.</p>
+</li>
+<li><p class="first">Know your audience (their prior knowledge and expectations).</p>
+</li>
+<li><p class="first">Use sentences of variable length, but prefer short sentences (~15 words). Read &quot;This sentence has five words&quot; by Gary Provost.</p>
+</li>
+<li><p class="first">Use one verb per sentence and keep it close to the subject.</p>
+</li>
+<li><p class="first">Keep modifiers (adverbs, adjectives) close to what they modify.</p>
+</li>
+<li><p class="first">Use a more appropriate formal negation form.</p>
+<blockquote>
+<ul class="simple">
+<li>not many = few</li>
+<li>not much = little</li>
+<li>not true = false</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">Avoid &quot;of&quot;.</p>
+<blockquote>
+<ul class="simple">
+<li>Ring the bell of the door. (FINE)</li>
+<li>Ring the door bell. (MUCH BETTER)</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">Avoid etc.</p>
+<blockquote>
+<ul class="simple">
+<li>The objects mass arises from their molar mass, density, volume, etc. (FINE)</li>
+<li>the objects mass arises from their molar mass, density, volume, and other physical properties. (BETTER)</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">Active voice is easier to read. Use passive voice only</p>
+<blockquote>
+<ul class="simple">
+<li>to highlight certain parts of your sentence.</li>
+<li>if subject is irrelevant and you want to omit it</li>
+<li>to avoid first person (for variety)</li>
+<li>for coherence</li>
+</ul>
+</blockquote>
+</li>
+<li><dl class="first docutils">
+<dt>Be precise with the use of the word “only”:</dt>
+<dd><ul class="first last simple">
+<li>I only eat apples (the speaker does nothing but eat apples or the speaker utilize apples only as food in opposition to juice them)</li>
+<li>I eat only apples (the speaker eats nothing but apples)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Use <em>serial comma</em>.</dt>
+<dd><ul class="first last simple">
+<li>France, Italy and Spain. (NO)</li>
+<li>France, Italy, and Spain. (YES)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Use a good dictionary:</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="https://www.macmillandictionary.com/">https://www.macmillandictionary.com/</a></li>
+<li><a class="reference external" href="https://dictionary.cambridge.org/us/">https://dictionary.cambridge.org/us/</a></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Use a phrase bank</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="http://www.phrasebank.manchester.ac.uk/describing-trends/">http://www.phrasebank.manchester.ac.uk/describing-trends/</a></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Use an academic word list</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="http://www.victoria.ac.nz/lals/resources/academicwordlist/">http://www.victoria.ac.nz/lals/resources/academicwordlist/</a></li>
+<li>Ask google for <em>verbs for scientific writing</em></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="verbs">
+<h1>Verbs</h1>
+<ul>
+<li><p class="first">Use active verbs.</p>
+<blockquote>
+<ul class="simple">
+<li>The lion was behind the tree. (Why was the lion behind the tree? Was he having a nap? Stalking prey? Basking in the sunshine?)</li>
+<li>The lion hid behind the tree. (Now we have a sentence that adds to the story.)</li>
+<li>I was rowing the boat. (Sometimes continuous tense weakens writing)</li>
+<li>I rowed the boat. (active verbs fits better most of the time)</li>
+<li><a class="reference external" href="https://kathysteinemann.com/Musings/to-be/">https://kathysteinemann.com/Musings/to-be/</a></li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">Avoid &quot;Verb + preposition&quot; structure</p>
+<blockquote>
+<ul class="simple">
+<li>Researchers <strong>looked at</strong> the way electrons <strong>build up</strong> around insulating materials. (INFORMAL)</li>
+<li>Researchers <strong>observed</strong> the way electrons <strong>accumulate</strong> around insulating materials. (FORMAL)</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">Avoid &quot;Verb + to be&quot; structure</p>
+<blockquote>
+<ul class="simple">
+<li>You <strong>should be asking</strong> her for help. (BAD)</li>
+<li>You <strong>should ask</strong> her for help. (GOOD)</li>
+<li><strong>There is no</strong> method <strong>that is guaranteed to</strong> succeed. (BAD)</li>
+<li><strong>No</strong> method <strong>guarantees</strong> success. (GOOD)</li>
+<li><a class="reference external" href="http://beaconpointservices.org/2018/05/09/8-strategies-to-eliminate-be-verbs/">http://beaconpointservices.org/2018/05/09/8-strategies-to-eliminate-be-verbs/</a></li>
+<li><a class="reference external" href="https://kathysteinemann.com/Musings/to-be/">https://kathysteinemann.com/Musings/to-be/</a></li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">Always prefer the &quot;cause to effect&quot; structure.</p>
+<blockquote>
+<ul class="simple">
+<li>the dog running away is a result of the open door (FINE)</li>
+<li>the opened door caused the dog to run away (BETTER)</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="adverb-placement">
+<h1>Adverb placement</h1>
+<p>Rule of thumb:</p>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Before an active verb:</dt>
+<dd>The Earth’s dry atmosphere <em>mainly contains</em> nitrogen.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>After the verb &quot;to be&quot;:</dt>
+<dd>The increase in greenhouse gases <em>is mainly</em> a result of humans changing the natural patterns of vegetation and polluting the atmosphere.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>mid-position between the auxiliary verb and the main verb:</dt>
+<dd>The Earth’s dry atmosphere <strong>is mainly composed of</strong> nitrogen.</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="comma">
+<h1>Comma</h1>
+<p>Extended set of rules: <a class="reference external" href="https://owl.purdue.edu/owl/general_writing/punctuation/commas/extended_rules_for_commas.html">https://owl.purdue.edu/owl/general_writing/punctuation/commas/extended_rules_for_commas.html</a></p>
+<ul>
+<li><p class="first">Use commas to separate independent clauses when they are joined by any of these seven coordinating conjunctions: and, but, for, or, nor, so, yet.</p>
+<blockquote>
+<ul class="simple">
+<li>The game was over, but the crowd refused to leave.</li>
+<li>The dog is young, but he’s well trained.</li>
+<li>The dog is young but well trained. (no comma)</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">Use commas after introductory a) clauses, b) phrases, or c) words that come before the main clause.</p>
+<blockquote>
+<ul class="simple">
+<li>In many types of solids, something happens...</li>
+<li>While I was eating, the cat scratched at the door. (Right)</li>
+<li>The cat scratched at the door, while I was eating. (Wrong, because the second sentence is dependent from the main clause)</li>
+<li>However, you may not be satisfied with the results.</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">Do not surround a symbol with commas or parentheses when it immediately follows the noun that defines it, but do insert the commas or parentheses if another phrase intervenes.</p>
+<blockquote>
+<ul class="simple">
+<li>As the temperatures approached the melting temperature Tm, all...</li>
+<li>As the temperatures approached the melting temperature reported by Green et al., Tm, all...</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">When inserting a parenthetical remark into a sentence do not punctuate what is within the parentheses (a parenthetical remark or section is put into something written or spoken but is not essential to it).</p>
+<blockquote>
+<ul class="simple">
+<li>Recall that the Brown-Green theory (see Sec. II below) must still be tested.</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">A completely separate parenthetical remark is punctuated as a regular sentence or group of sentences except that everything including the ending punctuation is enclosed within the bracketing.</p>
+<blockquote>
+<ul class="simple">
+<li>(Recall that the Brown-Green theory is still to be tested.) Again we begin to evaluate...</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">Square brackets enclose a phrase that already contains parentheses.</p>
+<blockquote>
+<ul class="simple">
+<li>Recall that the Brown-Green theory [see Eq. (2)] is still to be...</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">Use comma around:</p>
+<blockquote>
+<ul class="simple">
+<li>etc.</li>
+<li>e.g.</li>
+<li>i.e.</li>
+<li>viz.</li>
+<li>namely</li>
+<li>for example</li>
+<li>that is</li>
+<li>say</li>
+<li>in particular</li>
+<li>respectively</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">Do not use commas around:</p>
+<blockquote>
+<ul class="simple">
+<li>cf.</li>
+<li>et al.</li>
+<li>ditto (I am not sure about this one)</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Ditto usage:</p>
+<ul class="last simple">
+<li>Local residents are opposed to the proposal. Ditto many members of the city council.</li>
+<li>... friends don’t let friends use cf. because as long as its meaning hasn’t stabilized, it’s an ineffective tool for communication. Ditto for moot point ...</li>
+</ul>
+</div>
+</div>
+<div class="section" id="paragraph-structure-flow-and-cohesion">
+<h1>Paragraph structure (flow and cohesion)</h1>
+<div class="section" id="paragraph-structure-models">
+<h2>Paragraph structure models</h2>
+<blockquote>
+<ul class="simple">
+<li>TEXAS or TEEL  (topic, evidence, explain, link)</li>
+<li>uneven-u (<a class="reference external" href="https://thesiswhisperer.com/2019/02/13/the-uneven-u/">https://thesiswhisperer.com/2019/02/13/the-uneven-u/</a>)</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="thematic-progression">
+<h2>Thematic progression</h2>
+<p><strong>1. Linear progression (zigzag)</strong></p>
+<img alt="figs/1.png" src="figs/1.png" />
+<img alt="figs/1b.png" src="figs/1b.png" />
+<p><strong>2. Constant progression</strong></p>
+<img alt="figs/2.png" src="figs/2.png" />
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Types 1 and 2 are said to be &quot;canonical&quot;. Linear progression create a &quot;dynamic&quot; style and constant progression a &quot;static&quot; style of writing. Linear progression occur frequently in expository and argumentative texts as constant progression occur frequently in narratives and in news stories.</p>
+</div>
+<p><strong>3. Theme reiteration (constant theme)</strong></p>
+<img alt="figs/3.png" src="figs/3.png" />
+<img alt="figs/3b.png" src="figs/3b.png" style="width: 400px;" />
+<p><strong>4. Concentrative progression (constant rheme)</strong></p>
+<img alt="figs/4.png" src="figs/4.png" />
+<img alt="figs/4b.png" src="figs/4b.png" />
+<p><strong>5. Split rheme progression</strong></p>
+<img alt="figs/5.png" src="figs/5.png" />
+<img alt="figs/5b.png" src="figs/5b.png" />
+<p><strong>6. Split theme progression</strong></p>
+<img alt="figs/6.png" src="figs/6.png" style="width: 700px;" />
+<p><strong>7. Hyperthematic progression (</strong> Themes in subsequent clauses are derived from a hypertheme or from the same overriding theme.</p>
+<img alt="figs/7.png" src="figs/7.png" />
+<img alt="figs/7b.png" src="figs/7b.png" />
+<p><strong>8. Juxtaposition pattern</strong></p>
+<img alt="figs/8.png" src="figs/8.png" />
+<dl class="docutils">
+<dt>Figures from:</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="https://files.eric.ed.gov/fulltext/EJ1079122.pdf">https://files.eric.ed.gov/fulltext/EJ1079122.pdf</a></li>
+<li><a class="reference external" href="http://ir.nptu.edu.tw/retrieve/20777/13-15-34.pdf">http://ir.nptu.edu.tw/retrieve/20777/13-15-34.pdf</a></li>
+<li><a class="reference external" href="https://slideplayer.com/slide/10491267/">https://slideplayer.com/slide/10491267/</a></li>
+</ul>
+</dd>
+</dl>
+<p>Another example (hard): <a class="reference external" href="http://www.cc.kyoto-su.ac.jp/information/tesl-ej/ej48/a1.html">http://www.cc.kyoto-su.ac.jp/information/tesl-ej/ej48/a1.html</a></p>
+</div>
+<div class="section" id="theme-types">
+<h2>Theme types</h2>
+<img alt="figs/The_Concise_Encyclopedia_of_Applied_Linguistics.png" src="figs/The_Concise_Encyclopedia_of_Applied_Linguistics.png" />
+<img alt="figs/themes.png" src="figs/themes.png" style="width: 400px;" />
+<p>See also,</p>
+<blockquote>
+<ul class="simple">
+<li><a class="reference external" href="https://pt.slideshare.net/t3nee/20-theme-and-rheme-adip-arifin/3">https://pt.slideshare.net/t3nee/20-theme-and-rheme-adip-arifin/3</a></li>
+<li><a class="reference external" href="https://www.slideshare.net/septyrianipangindoman/discourse-analysis-and-grammar-48235695">https://www.slideshare.net/septyrianipangindoman/discourse-analysis-and-grammar-48235695</a></li>
+</ul>
+</blockquote>
+</div>
+</div>
+<div class="section" id="connective-words-cohesive-devices">
+<h1>Connective words (cohesive devices)</h1>
+<p>Connective words guide the reader. The author is the only person that exactly knows what he wants to express. Do not let your reader doing your job!</p>
+<div class="section" id="linking-back-words">
+<h2>Linking back words</h2>
+<blockquote>
+<ul class="simple">
+<li>This</li>
+<li>That</li>
+<li>It</li>
+<li>...</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="repetition">
+<h2>Repetition</h2>
+<p>Use repetition or synonyms as linking back devices to avoid using this, that, ... (mostly used for variety).</p>
+</div>
+<div class="section" id="conjunctive-adverbs">
+<h2>Conjunctive Adverbs</h2>
+<p>A conjunctive adverb is an adverb that has been authorized to perform the function of a conjunction. See example below:</p>
+<blockquote>
+<ul class="simple">
+<li>Adverbial conjunction: “The settlements are an acknowledgment that our business model is sound; otherwise, we would not have agreed to the terms.”</li>
+<li>Adverb: &quot;The memory troubled him through the otherwise pleasant afternoon.&quot;</li>
+</ul>
+</blockquote>
+<p>Like other adverbs, conjunctive adverbs can be moved to different parts of a sentence because they are not connecting grammatical parts of the sentence; for example,</p>
+<blockquote>
+<ul class="simple">
+<li>These words are call adverbs; however, they feel like conjunctions.</li>
+<li>These words are call adverbs; they feel, however, like conjunctions.</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="conjunctions">
+<h2>Conjunctions</h2>
+<blockquote>
+<ul>
+<li><p class="first">Coordinating conjunction</p>
+<blockquote>
+<p>A coordinating conjunction is a word that joins two elements of equal grammatical rank and syntactic importance. The seven coordinating conjunctions are <strong>for</strong>, <strong>and</strong>, <strong>nor</strong>, <strong>but</strong>, <strong>or</strong>, <strong>yet</strong>, and <strong>so</strong> (FANBOYS). When starting a sentence with a coordinating conjunction do not use a comma after the coordinating conjunction. Coordinating conjunctions are not transitional expressions like for example or first of all. You will rarely use punctuation after them.</p>
+</blockquote>
+</li>
+<li><p class="first">Subordinating conjunction (<a class="reference external" href="https://www.bbc.co.uk/bitesize/topics/zwwp8mn/articles/zqk37p3">https://www.bbc.co.uk/bitesize/topics/zwwp8mn/articles/zqk37p3</a>)</p>
+<blockquote>
+<p>A subordinating conjunction is simply the word/words that is used to join a subordinating clause to another clause or sentence. (A subordinate clause is a clause that cannot stand alone as a complete sentence). Examples: <strong>although</strong>, <strong>because</strong> or <strong>when</strong>.</p>
+</blockquote>
+</li>
+<li><p class="first">Correlative conjunction</p>
+<blockquote>
+<p>Correlative conjunctions are pairs such as <strong>neither/nor</strong>, <strong>both/and</strong>, and <strong>not/but</strong>. These conjunctions connect two balanced clauses, phrases, or words. The two elements that correlative conjunctions connect are usually similar in length and grammatical structure.</p>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<p><strong>Extended lists of cohesive devices</strong></p>
+<blockquote>
+<ul class="simple">
+<li><a class="reference external" href="https://www.grammarbank.com/connectives-list.html">https://www.grammarbank.com/connectives-list.html</a></li>
+<li><a class="reference external" href="https://emedia.rmit.edu.au/learninglab/content/common-linking-words-0">https://emedia.rmit.edu.au/learninglab/content/common-linking-words-0</a></li>
+<li><a class="reference external" href="http://www.lousywriter.com/cheat-sheet-most-popular-connective-words.php">http://www.lousywriter.com/cheat-sheet-most-popular-connective-words.php</a></li>
+</ul>
+</blockquote>
+</div>
+</div>
+<div class="section" id="articles">
+<h1>Articles</h1>
+<ul>
+<li><p class="first">uncountable</p>
+<blockquote>
+<ul class="simple">
+<li>this one exactly: <strong>The</strong></li>
+<li>one of many: nothing</li>
+<li>All of them everywhere: nothing</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">countable (plural)</p>
+<blockquote>
+<ul class="simple">
+<li>this one exactly: <strong>The</strong></li>
+<li>one of many: nothing</li>
+<li>All of them everywhere: nothing</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">countable (singular)</p>
+<blockquote>
+<ul class="simple">
+<li>this one exactly: <strong>The</strong></li>
+<li>one of many: <strong>a/an</strong></li>
+<li>All of them everywhere: <strong>the</strong></li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="apostrophe-s">
+<h1>Apostrophe s</h1>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Noun not ending in s</dt>
+<dd><ul class="first last">
+<li>John's hat</li>
+<li>Woman's hat</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Common noun ending in s</dt>
+<dd><ul class="first last">
+<li>The class's hour</li>
+<li>Boss's wife</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Proper noun ending in s</dt>
+<dd><ul class="first last">
+<li>Texas' weather</li>
+<li>Mr. Jones' size</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Plural noun ending in s</dt>
+<dd><ul class="first last">
+<li>Guys' night out</li>
+<li>Two actresses' roles</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Two nouns</dt>
+<dd><ul class="first last">
+<li>Cesar and Maribel's home</li>
+<li>Maribel's and my home</li>
+<li>Cesar's and Maribel's home are both lovely</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>To form the plural of numbers add s (1980s), to symbols add ’s (A’s), and to abbreviations add ’s or s (NMR’s or NMRs). This suggestion might change from journal to journal.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Some journals suggest that, to form the possessive of names add ’s (apostrophe s), regardless of the number of syllables or final letter (Green’s, Jones’s, de Gennes’s). See APS style guide: <a class="reference external" href="https://cdn.journals.aps.org/files/styleguide-pr.pdf">https://cdn.journals.aps.org/files/styleguide-pr.pdf</a></p>
+</div>
+</div>
+<div class="section" id="latin-abbreviations">
+<h1>Latin abbreviations</h1>
+<p><strong>Latin words and abbreviations should not be italicized</strong></p>
+<ul>
+<li><p class="first">, i.e.,   = that is</p>
+</li>
+<li><p class="first">, e.g.,   = for example</p>
+</li>
+<li><p class="first">, etc.    = and so on, and so forth.</p>
+<blockquote>
+<p>Example: Students ranked their school subjects (chemistry, math, etc.) in</p>
+</blockquote>
+</li>
+<li><p class="first">, viz.,   = namely</p>
+<blockquote>
+<p>Example: We first replicated our earlier study (viz., Black &amp; Avery, 2008) and then extended it.</p>
+</blockquote>
+</li>
+<li><p class="first">cf.       = bring together, compare (do not use commas around cf.)</p>
+</li>
+<li><p class="first">et al.    = and others (do not use commas around et al.)</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">APA style: cf, eg, etc, ie, viz, and vs must be used only inside parenthesis.</p>
+</div>
+</div>
+<div class="section" id="dashes">
+<h1>Dashes</h1>
+<p>See <a class="reference external" href="https://7esl.com/em-dash/">https://7esl.com/em-dash/</a></p>
+<ul>
+<li><p class="first">hyphen (-)</p>
+<blockquote>
+<ul class="simple">
+<li>Avoid hyphens that serve no useful purpose, e.g.,cutoff, not cut-off; output, not out-put.</li>
+<li>Prefixes and suffixes usually should be closed up (nonradioactive); but do not close them up if a double letter is produced (semi-infinite), when added to a proper noun (non-Fermi), when added to two or more words (non-time-dependent), or if closing up could change the meaning of the word (un-ionized).</li>
+<li>&quot;Self&quot; words, “free” words, and some “half” words should be hyphenated (self-consistent, worry-free, and half-life), but “like” words are closed up (spacelike) unless they become extremely long or cumbersome.</li>
+<li>Chemical prefixes and suffixes should be hyphenated (cis-dimethylethylene)</li>
+<li>Numbers above 10 should be hyphenated (11-fold, but twofold).</li>
+<li>A hyphen also can be used as a sorting agent in predicate adjectives of three or more words (...is face-centered-cubic).</li>
+<li>Use a hyphen in written-out numbers of two words or more (twenty-five)</li>
+<li>To prevent ambiguity and make reading easier, modifiers made up of two or more words can be hyphenated (wrong-signature points, 8-MeV data).  Strings of modifiers can be sorted with a combination of hyphen and en dash (two-particle–two-hole configuration). Editorial policy varies on this subject from journal to journal.</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">en dash (–) <a class="reference external" href="https://www.thepunctuationguide.com/en-dash.html">https://www.thepunctuationguide.com/en-dash.html</a></p>
+<blockquote>
+<ul class="simple">
+<li>Indicate a range of numbers. &quot;He lived in this town from 1998–2009.&quot;</li>
+<li>Express period of time. &quot;You could choose 2 numbers from 1–50.&quot;</li>
+<li>Used with scores. &quot;The red team won 3–1 in this match.&quot;</li>
+<li>Indicate distance. &quot;Europe–Usa is a long flight.&quot;</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The en dash is typically used without spaces on either side.</p>
+</div>
+<ul>
+<li><p class="first">em dash (—) <a class="reference external" href="https://www.thepunctuationguide.com/em-dash.html">https://www.thepunctuationguide.com/em-dash.html</a></p>
+<blockquote>
+<ul class="simple">
+<li>Show a break in a sentence. &quot;Pleas call my supervisor—John Wick—on Friday.&quot;</li>
+<li>Marking on unimportant words. &quot;To get to New York from here—you are heading there, right?—you need a car or a train.&quot;</li>
+<li>Create emphasis. &quot;My mom loves fish—my dad loves beef.&quot;</li>
+<li>Indicates a sudden change of thought. &quot;I had a great vacation in Bali—oh! Is that your dog? He is so cute!&quot;</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The em dash is typically used without spaces on either side, and that is the style used in this guide. Most newspapers, however, set the em dash off with a single space on each side.</p>
+</div>
+</div>
+<div class="section" id="use-of-the-colon">
+<h1>Use of the colon</h1>
+<ul>
+<li><p class="first">Phrases introduced by a colon do not begin with a capital letter.</p>
+<blockquote>
+<ul class="simple">
+<li>Furthermore, the lake has a natural noise center source: a dam.</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">A complete sentence introduced by a colon may be, but need not be, capitalized.</p>
+<blockquote>
+<ul class="simple">
+<li>Finally, the energies of bound surface states are calculated by means of the “effective-Hamiltonian” technique: Let <span class="formula"><i>H</i><sub><i>eff</i></sub></span> be defined by <span class="formula"><i>E</i> − <i>H</i><sub><i>eff</i></sub> = <i>G</i><sub>0</sub>(<i>E</i><sup> − 1</sup> − <i>V</i>)</span>. (Right)</li>
+<li>Finally, the energies of bound surface states are calculated by means of the “effective-Hamiltonian” technique: let <span class="formula"><i>H</i><sub><i>eff</i></sub></span> be defined by <span class="formula"><i>E</i> − <i>H</i><sub><i>eff</i></sub> = <i>G</i><sub>0</sub>(<i>E</i><sup> − 1</sup> − <i>V</i>)</span>. (Right)</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">When more than one sentence is introduced by a colon capitalize the first word.</p>
+<blockquote>
+<ul class="simple">
+<li>In order to tackle Eq. (A5) we introduce the following simplifications and approximations: (1) Each eigenmode in the band is excited by white noise. (2) No eigenmode beyond the band is excited. Because the ...</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">Do not use a colon after a form of the verb “to be” or between a verb or a preposition and its object.</p>
+<blockquote>
+<ul class="simple">
+<li>The momenta of the three α particles in the c.m. system are: p1, p2, and p3. (Wrong)</li>
+<li>The momenta of the three α particles in the c.m. system are p1, p2, and p3. (Right)</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="text-and-math-as-sentences">
+<h1>Text and math as sentences</h1>
+<ul>
+<li><p class="first">Treat the text and mathematical formulas as an entity. Punctuate mathematical expressions as sentences or parts of sentences.</p>
+</li>
+<li><p class="first">Avoid beginning a sentence with a symbol if the sentence before it has ended with a symbol or number.</p>
+</li>
+<li><p class="first">There are two alphabets used conventionally: Greek and Latin (upper- and lowercase letters of each) in lightface and boldface.</p>
+<blockquote>
+<ul class="simple">
+<li>The two main Latin fonts, roman and italic, are used to create a distinction between words and mathematical symbols (use italics for mathematical symbols)</li>
+<li>Boldface type is typically reserved for indicating three-vectors and  in some special cases matrices.</li>
+</ul>
+</blockquote>
+</li>
+<li><dl class="first docutils">
+<dt>Greek alphabet</dt>
+<dd><ul class="first last simple">
+<li>some variables and constants</li>
+<li>symbols for particles</li>
+<li>some operators, and some units of measure.</li>
+<li>Note here that the Greek letter, not the word, is commonly used in most situations.</li>
+<li>lowercase letters are typically italicized while capital Greek letters typically stand upright but can also be italicized.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>In general, mathematical symbols are written in italics. Letters from the Latin alphabet used as mathematical symbol must be italicized. On the other hand, Greek letters are &quot;naturally&quot; italicized and may be freely used as mathematical entities (this is true for LaTeX).</li>
+<li>In LaTeX, capital Greek letters may be italicized if necessary, but lowercase letters will need special packages to stand upright.</li>
+</ul>
+</div>
+<ul>
+<li><p class="first">The Latin alphabet is available in five letter type fonts: roman (upright), italic (slanted), script(cursive), German (Fraktur), and sans serif (unadorned).</p>
+<blockquote>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Latin Roman upright:</dt>
+<dd><ul class="first last">
+<li>most multiletter operators and functions (e.g., exp, ln, sin, cos)</li>
+<li>chemical symbols and compounds</li>
+<li>units of measure</li>
+<li>bold three-vector notation (e.g., <strong>k</strong>)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Latin Roman <em>italic</em>:</dt>
+<dd><ul class="first last">
+<li>foreign words</li>
+<li>words or phrases that indicate emphasis</li>
+<li>variables</li>
+<li>constants</li>
+<li>symbols for particles</li>
+<li>most single-letter operators (e.g., <em>e</em>)</li>
+<li>axes and  planes,</li>
+<li>types (e.g., <em>n</em>, <em>p</em>), bands</li>
+<li>geometric points</li>
+<li>angles</li>
+<li>lines</li>
+<li>chemical prefixes</li>
+<li>symmetry designations</li>
+<li>transitions</li>
+<li>critical points</li>
+<li>quantum-state symbols in spectroscopy</li>
+<li>most single-letter abbreviations (e.g., <em>e</em>)</li>
+<li>in an alloy, the major constituent is italicized, the other chemical symbol is roman as usual, e.g., <span class="formula"><i>Cu</i><span class="mathrm">Mn</span></span>.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Script (cursive) font</dt>
+<dd><ul class="first last">
+<li>variables  and  operators</li>
+<li>constants</li>
+<li>matrix elements</li>
+<li>and some quarks</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>German (Fraktur) font</dt>
+<dd><ul class="first last">
+<li>variables.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Sans serif (unadorned) font</dt>
+<dd><ul class="first last">
+<li>a few variables (S, T in tensor notation)</li>
+<li>shapes (e.g., in &quot;L shaped&quot; the L must be Sans serif)</li>
+<li>and a few operators</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>See sec. IV. A. 1 in the APS style guide: <a class="reference external" href="https://cdn.journals.aps.org/files/styleguide-pr.pdf">https://cdn.journals.aps.org/files/styleguide-pr.pdf</a></li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">When the argument of a function contains parentheses, enclose it in <strong>bold</strong> round parentheses, i.e.,</p>
+</li>
+</ul>
+<div class="formula">
+<i>g</i><b>(</b><i>x</i><sup>2</sup><i>a</i><sup>3 ⁄ 2</sup>(<i>α</i><sub>1</sub> + <i>α</i><sub>2</sub>)<sup> − 1 ⁄ 2</sup><b> )</b>.
+</div>
+<ul>
+<li><p class="first">This <span class="formula"><i>H</i><span class="scripts"><sup class="script"> + </sup><sub class="script">2</sub></span></span> is different from this <span class="formula"><i>H</i><sub>2</sub><sup> + </sup></span> and they have different meaning.</p>
+</li>
+<li><p class="first">Abbreviations in subscripts and superscripts fall into two categories:</p>
+<blockquote>
+<ul>
+<li><p class="first">single-letter</p>
+<p>Most single-letter abbreviations are conventionally printed in the italic font, i.e., <span class="formula"><i>E</i><sub><i>C</i></sub></span> where C stands for Coulomb.</p>
+</li>
+<li><p class="first">multiletter</p>
+<ul class="simple">
+<li>Multiletter abbreviations are conventionally printed in the roman font whether they represent one or more words, i.e., <span class="formula"><i>E</i><sub><span class="mathrm">lab</span></sub></span>, where lab stands for laboratory (truncated word—lowercase) and <span class="formula"><i>E</i><sub><span class="mathrm">HF</span></sub></span>, where HF stands for Hartree and Fock (acronym), two propernames.</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">Please note that you should always capitalize abbreviations that represent proper names.</p>
+</li>
+<li><p class="first">If an equation is a variant of a previous equation (it may be separated from the original equation by other equations and/or by text), it may be numbered with the same number as the original and a prime, double prime, etc., as appropriate (one prime means first variation, double prime means second variation, etc.).</p>
+</li>
+<li><p class="first">For the purpose of grouping, the sequence of bracketing preferred for Physical Review articles is {[()]}, working outwards in sets ( ), [ ], and{ }. If you have used these three sets and need additional bracketing, begin the sequence again in the same order but in bold print.</p>
+</li>
+<li><p class="first">Note that some brackets have specialized meaning in certain context, e.g., Plane or set of parallel planes in crystallography (111) or point designated by coordinates (x,y,z).</p>
+</li>
+<li><p class="first">Note the difference between <span class="formula"> ≈ </span> (approximately equal) and <span class="formula"> ~ </span> (asymptotically equal)</p>
+</li>
+</ul>
+</div>
+<div class="section" id="units">
+<h1>Units</h1>
+<ul class="simple">
+<li>The combination of prefix and unit symbol is treated as a single symbol. For instance, such a combination can be raised to a power, i.e., cm2.</li>
+<li>Most symbols for units are printed in lowercase roman type without periods. Units derived from proper names, however, are written with initial capital letters,i.e., coulomb (C), weber (Wb).</li>
+<li>10 cm and not 10 centimeters. However, &quot;a few centimeters&quot; is right while &quot;a few cm&quot; is wrong.</li>
+<li>The number (numeral) is separated from the unit following by a full space, e.g., 1.8 MeV. Some will prefer that the space between the two should be a thin space (&quot;10\,m&quot; in LaTeX), but that is required only if the journal specifies it.</li>
+<li>The space between the number and the unit must be nonbreaking (&quot;10~m&quot; in LaTeX).</li>
+<li>The unit is not italicized.</li>
+<li>Prefixes that make the unit BIGGER (mega, giga, etc.) should be capitalized, with the historical exception of “k”, “h”, and “da”.</li>
+<li>Some units are not spaced off from the number, e.g., 1%, 1°, and 1°C.</li>
+</ul>
+</div>
+<div class="section" id="tips-on-typography">
+<h1>Tips on typography</h1>
+<ul>
+<li><p class="first">If space is used between the text and the citation, use a nonbreaking space (text text text~\cite{Foo2000} in LaTeX).</p>
+</li>
+<li><p class="first">Interword spaces: TeX assumes a period ends a sentence. So, put a \_ (where _ means “space”) in a sentence like:</p>
+<blockquote>
+<p>Smith et al.\ say that...</p>
+</blockquote>
+</li>
+<li><p class="first">Interword spaces 2: TeX assumes that a period do not end a sentence if an uppercase letter precedes the period. So use \&#64; before the period:</p>
+<blockquote>
+<p>In the class, I gave Bob a C&#64;. Therefore, ...</p>
+</blockquote>
+</li>
+<li><p class="first">Use small capitals to identify computer program names, designation of ionization states in atomic spectroscopy, and the names of logical operations; e.g., DWUCK, Fe II, and OR. See APS style guide: <a class="reference external" href="https://cdn.journals.aps.org/files/styleguide-pr.pdf">https://cdn.journals.aps.org/files/styleguide-pr.pdf</a></p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">TeX command for small caps is \textsc{...}.</p>
+</div>
+</div>
+<div class="section" id="figures">
+<h1>Figures</h1>
+<ul class="simple">
+<li>Label parts of figures (a), (b), (c), etc.; curves A,B,C, etc.; geometric points, angles, and lines A, B, C, etc.; or a,b,c, etc., as appropriate. See APS style guide: <a class="reference external" href="https://cdn.journals.aps.org/files/styleguide-pr.pdf">https://cdn.journals.aps.org/files/styleguide-pr.pdf</a></li>
+<li>Treat graphs so that they are completely self-explanatory.</li>
+</ul>
+</div>
+<div class="section" id="style-instructions-for-parts-of-a-manuscript">
+<h1>Style instructions for parts of a manuscript</h1>
+<div class="section" id="title">
+<h2>Title</h2>
+<ul class="simple">
+<li>Your title is critical. In less than 100 characters, provide a quick summary of the paper. Include enough details for specialists but be simple enough for non-specialists to understand.</li>
+<li>State what has been shown, not what has been done.</li>
+<li>Make sure your title contains the main message.</li>
+<li>Avoid <em>the</em>, <em>an</em>, <em>study</em>, <em>investigation</em>, or anything that fills up space without communicating new information.</li>
+<li>Identify the importance of each word.</li>
+<li>Build at least 5 different title, than pick one.</li>
+<li>The beginning and the end are the most import part.</li>
+<li>Use colon (:) to &quot;reboot&quot; the reader's attention.</li>
+<li>Avoid chemical formulas (due to search engines).</li>
+<li>Think about how <em>search engines</em> will search for your article.</li>
+</ul>
+</div>
+<div class="section" id="abstract-for-events">
+<h2>Abstract (for events)</h2>
+<ul class="simple">
+<li>Introduction [general context (what do you tell to non-experts) and specific context (what you tell to your colegues)].</li>
+<li>Problem to be solved and solution proposed</li>
+<li>Objective (only one objective and very specific)</li>
+<li>Methodology (main parameters)</li>
+<li>Results (what was found)</li>
+<li>Discussion (what the results found mean, comparisons, perspectives)</li>
+<li>Conclusion and/or Perspectives</li>
+</ul>
+</div>
+<div class="section" id="abstract-for-articles">
+<h2>Abstract (for articles)</h2>
+<ul class="simple">
+<li>An effective Abstract is a global paragraph that prepares the reader for the rest of the document. Write it with all audiences in mind so the reader can decide if the paper is of interest. Include a foreword (a description of the &quot;need&quot; for your research), the context (what the reader needs to know to understand the need for the research), a summary (what you did to solve the problem), a conclusion (an interpretation and/or recommendation based on the findings); and perspectives (what needs to be done in the future).</li>
+<li>Structure your abstract to attract ‘non-specialist’ readers. A paper that is attractive to ‘non-specialists’ will be read (and cited) by experts in other fields.</li>
+</ul>
+</div>
+<div class="section" id="introduction">
+<h2>Introduction</h2>
+<p>The Introduction follows the abstract. Provide some context to orient the audience and establish your work’s importance. State the need for your work with respect to what the scientific community currently has and what it wants. Indicate how you have addressed the need. Preview the rest of the paper to prepare readers for its structure and the object of the paper.</p>
+<ul>
+<li><p class="first">General context (background information for non experts)</p>
+</li>
+<li><p class="first">Specific context</p>
+</li>
+<li><p class="first">problem to be solved</p>
+</li>
+<li><p class="first">solution proposed</p>
+</li>
+<li><p class="first">objective</p>
+</li>
+<li><p class="first">Verb tenses (very flexible, but below is a little guidance)</p>
+<blockquote>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>present: Accepted facts</dt>
+<dd>The photons travel at light speed.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>present continuous: temporary truth</dt>
+<dd>The photons are traveling at light speed.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>past: important in the past</dt>
+<dd>The photons traveled at light speed.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>present perfect: important now</dt>
+<dd>The photons have traveled at light speed.</dd>
+</dl>
+</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="methodology">
+<h2>Methodology</h2>
+<p>Describe how you obtained the results. Include experimental methods, materials, the development of theory, device design, modeling tool development, and more. Provide enough details so other researchers can validate your conclusions.</p>
+<ul>
+<li><p class="first">Verb tenses (very flexible, but below is a little guidance)</p>
+<blockquote>
+<ul class="simple">
+<li>present (active or passive): Common procedure and equipment description</li>
+<li>past (active or passive): your own actions. Your contribution to the experiment.</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="results">
+<h2>Results</h2>
+<ul class="simple">
+<li>Figures, graphs, images</li>
+<li>Present results without any kind of &quot;bias&quot;</li>
+</ul>
+</div>
+<div class="section" id="discussion">
+<h2>Discussion</h2>
+<p>Results and Discussion follow with an explanation of your results. Show how the results answer the research questions posed in the Introduction. The discussion flows from summarizing, interpreting, and explaining the results, whether they were expected or unexpected, comparing them to previous work, and hypothesizing about their generality.</p>
+<p>Explicit the connections between observations:</p>
+<blockquote>
+<ul class="simple">
+<li>Clear/strong causal connection: cause, produce, yield, arise from</li>
+<li>Partial cause: contribute to, be a factor in, affect</li>
+<li>First cause in a causal chain: initiate, generate, originate in</li>
+<li>Weak causal connection: be related to, be associated to, be connected to</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion</h2>
+<p>In a short Conclusion, state the most important outcome of the work and interpret the findings—don’t simply summarize. Report your success in addressing the need stated in the Introduction and include perspectives. This could be your plans for future work on the subject, or an invitation to readers to investigate something additional.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
