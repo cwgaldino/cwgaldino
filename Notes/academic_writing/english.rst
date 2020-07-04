@@ -26,7 +26,6 @@ General tips
 - Avoid "of".
 
     - Ring the bell of the door. (FINE)
-
     - Ring the door bell. (MUCH BETTER)
 
 - Avoid etc.
