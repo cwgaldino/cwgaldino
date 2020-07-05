@@ -2,6 +2,8 @@
 Academic writing
 ################
 
+.. contents:: Table of Contents
+
 General tips
 ==================
 
@@ -438,7 +440,7 @@ See https://7esl.com/em-dash/
     - Indicate distance. "Europe |--| Usa is a long flight."
 
 .. note::
-    The en dash is typically used without spaces on either side.
+    The en dash is typically used **without spaces** on either side.
 
 - em dash (|---|) https://www.thepunctuationguide.com/em-dash.html
 
@@ -451,7 +453,7 @@ See https://7esl.com/em-dash/
     - Indicates a sudden change of thought. "I had a great vacation in Bali  |---|  oh! Is that your dog? He is so cute!"
 
 .. note::
-    The em dash is typically used without spaces on either side, and that is the style used in this guide. Most newspapers, however, set the em dash off with a single space on each side.
+    The em dash is typically used **without spaces** on either side, and that is the style used in this guide. **Most newspapers, however, set the em dash off with a single space on each side.**
 
 
 .. |--| unicode:: U+2013   .. en dash
@@ -610,15 +612,55 @@ Units
 Tips on typography
 ====================
 
-- If space is used between the text and the citation, use a nonbreaking space (text text text~\\cite{Foo2000} in LaTeX).
+- Where to use nonbreaking spaces:
 
-- Interword spaces: TeX assumes a period ends a sentence. So, put a \\_ (where _ means “space”) in a sentence like:
+    - If space is used between the text and the citation, use a nonbreaking space
 
-    Smith et al.\\ say that...
+        - text text text~\\cite{Foo2000}
 
-- Interword spaces 2: TeX assumes that a period do not end a sentence if an uppercase letter precedes the period. So use \\@ before the period:
+    - Between text and references
 
-    In the class, I gave Bob a C\@. Therefore, ...
+        - text text text~\\ref{...}
+
+    - Between a person's forenames and between multiple surnames
+
+        - Dr.~Faust
+        - Donald~E
+
+    - in units and in expressions in which figures and abbreviations (or symbols) are separated by a space
+
+        - 17~kg
+        - AD~565
+        - 2:50~pm
+        - £11~billion
+        - 5 |deg| ~24'~21.12"~N
+        - World War~II
+
+    - Between math symbols in apposition with nouns
+
+        - dimension~$d$
+        - function~$f(x)$
+
+    - When mathematical phrases are rendered in words
+
+        - equals~$n$
+        - less than~$\epsilon$
+
+    - When cases are being enumerated within a paragraph
+
+        - (b)~Show that $f(x)$ is (1)~continuous; (2)~bounded.
+
+    - If space is used between the text and an en dash, use a nonbreaking space.
+
+- Interword spaces:
+
+    - TeX assumes a period ends a sentence. So, put a \\_ (where _ means “space”) in a sentence like:
+
+        Smith et al.\\ say that...
+
+    - TeX assumes that a period do not end a sentence if an uppercase letter precedes the period. So use \\@ before the period:
+
+        In the class, I gave Bob a C\@. Therefore, ...
 
 - Use small capitals to identify computer program names, designation of ionization states in atomic spectroscopy, and the names of logical operations; e.g., DWUCK, Fe II, and OR. See APS style guide: https://cdn.journals.aps.org/files/styleguide-pr.pdf
 
