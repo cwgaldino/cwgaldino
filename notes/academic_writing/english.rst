@@ -427,18 +427,21 @@ See https://7esl.com/em-dash/
 
     - Use a hyphen in written-out numbers of two words or more (twenty-five)
 
-    - To prevent ambiguity and make reading easier, modifiers made up of two or more words can be hyphenated (wrong-signature points, 8-MeV data).  Strings of modifiers can be sorted with a combination of hyphen and en dash (two-particle |--| two-hole configuration). Editorial policy varies on this subject from journal to journal.
+    - To prevent ambiguity and make reading easier, modifiers made up of two or more words can be hyphenated (e.g., wrong-signature points, 8-MeV data).  Strings of modifiers can be sorted with a combination of hyphen and en dash (two-particle |--| two-hole configuration). Editorial policy varies on this subject from journal to journal.
 
-- en dash (|--|) https://www.thepunctuationguide.com/en-dash.html
+- en dash (|--|) https://www.thepunctuationguide.com/en-dash.html ; https://www.dailywritingtips.com/use-a-dash-for-number-ranges/
 
-    - Indicate a range of numbers. "He lived in this town from 1998 |--| 2009."
+    - Indicate a range of numbers. “chapters 1–10” or “250–300 pages”
 
-    - Express period of time. "You could choose 2 numbers from 1 |--| 50."
+    - Express period of time. "He lived happily in this town (1998 |--| 2009)."
 
-    - Used with scores. "The red team won 3 |--| 1 in this match."
+    - Used with scores. "The red team won 3 |--| 1 in this match."; “The city council approved the project with a 5 |--| 2 vote.”
 
     - Indicate distance. "Europe |--| Usa is a long flight."
 
+.. warning::
+    Note that “from 2009 |--| 2012” and “between 2009 |--| 2012” are incorrect; either use both **from** and **to**, or **between** and **and**, or neither.
+    
 .. note::
     The en dash is typically used **without spaces** on either side.
 
