@@ -441,7 +441,7 @@ See https://7esl.com/em-dash/
 
 .. warning::
     Note that “from 2009 |--| 2012” and “between 2009 |--| 2012” are incorrect; either use both **from** and **to**, or **between** and **and**, or neither.
-    
+
 .. note::
     The en dash is typically used **without spaces** on either side.
 
@@ -521,14 +521,13 @@ Text and math as sentences
     - Latin Roman upright:
         - most multiletter operators and functions (e.g., exp, ln, sin, cos)
         - chemical symbols and compounds
-        - units of measure
+        - units of measure (e.g., T, m, V, l -> Tesla, meter, Volt, liter)
         - bold three-vector notation (e.g., **k**)
 
     - Latin Roman *italic*:
         - foreign words
         - words or phrases that indicate emphasis
-        - variables
-        - constants
+        - variables and constants (e.g., *m* = 10 kg, *T* = 10 K, *t* = time, ...)
         - symbols for particles
         - most single-letter operators (e.g., *e*)
         - axes and  planes,
